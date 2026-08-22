@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard Robot WebRTC</title>
+
+  <link rel="icon" href="{{ url_for('static',filename='icon.ico') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+</head>
+
+<body>
+  <main>
+
+
+
+    <div class="layout">
+
+      <section class="panel">
+        <h1>Panel de Control</h1>
+        <br/>
+
+
+            <div class="tabs-container">
+
+        <div class="tabs">
+            <div class="tab active" data-tab="1">Controles</div>
+            <div class="tab" data-tab="2">Matriz</div>
+            <div class="tab" data-tab="3">Servomotores</div>
+        </div>
+
+        <div class="content active" id="tab1">
+        <div class="controls">
+            <div class="layout">
+            <section>
+            <div class="command-buttons" aria-label="Controles de movimiento del robot">
+                <button type="button" class="cmd-button" data-command="front 0">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M12 2l7 7h-4v11h-6V9H5z" />
+                    </svg>
+                </button>
+                <div class="command-row">
+                    <button type="button" class="cmd-button" data-command="left 0">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M2 12l7-7v4h11v6H9v4z" />
+                        </svg>
+                    </button>
+                    <button type="button" class="cmd-button" data-command="stop">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <rect x="6" y="6" width="12" height="12" rx="3" ry="3" />
+                        </svg>
+                    </button>
+                    <button type="button" class="cmd-button" data-command="right 0">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M22 12l-7 7v-4H4v-6h11V5z" />
+                        </svg>
+                    </button>
+                </div>
+                <button type="button" class="cmd-button" data-command="back 0">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M12 22l-7-7h4V4h6v11h4z" />
+                    </svg>
+                </button>
+            </div>
+            </section>
+            <section>
+            <div class="command-buttons" aria-label="Controles de movimiento del robot">
+                <div class="command-row">
+                    <button type="button" class="cmd-button" data-command="games">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.99999 8.5C7.99999 7.94772 7.55227 7.5 6.99999 7.5C6.4477 7.5 5.99999 7.94772 5.99999 8.5V9H5.49999C4.9477 9 4.49999 9.44771 4.49999 10C4.49999 10.5523 4.9477 11 5.49999 11H5.99999V11.5C5.99999 12.0523 6.4477 12.5 6.99999 12.5C7.55227 12.5 7.99999 12.0523 7.99999 11.5V11H8.49999C9.05227 11 9.49999 10.5523 9.49999 10C9.49999 9.44771 9.05227 9 8.49999 9H7.99999V8.5Z" fill="#0F1729"/>
+                        <path d="M18 8C18 8.55229 17.5523 9 17 9C16.4477 9 16 8.55229 16 8C16 7.44772 16.4477 7 17 7C17.5523 7 18 7.44772 18 8Z" fill="#0F1729"/>
+                        <path d="M17 13C17.5523 13 18 12.5523 18 12C18 11.4477 17.5523 11 17 11C16.4477 11 16 11.4477 16 12C16 12.5523 16.4477 13 17 13Z" fill="#0F1729"/>
+                        <path d="M16 10C16 10.5523 15.5523 11 15 11C14.4477 11 14 10.5523 14 10C14 9.44771 14.4477 9 15 9C15.5523 9 16 9.44771 16 10Z" fill="#0F1729"/>
+                        <path d="M19 11C19.5523 11 20 10.5523 20 10C20 9.44771 19.5523 9 19 9C18.4477 9 18 9.44771 18 10C18 10.5523 18.4477 11 19 11Z" fill="#0F1729"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3C10.1879 3 7.96237 3.25817 6.21782 3.5093C3.94305 3.83676 2.09096 5.51696 1.60993 7.7883C1.34074 9.05935 1.07694 10.5622 1.01649 11.8204C0.973146 12.7225 0.877981 13.9831 0.777155 15.1923C0.672256 16.4504 1.09148 17.7464 1.86079 18.6681C2.64583 19.6087 3.88915 20.2427 5.32365 19.8413C6.24214 19.5842 6.97608 18.9387 7.5205 18.3026C8.07701 17.6525 8.51992 16.9124 8.83535 16.3103C9.07821 15.8467 9.50933 15.5855 9.91539 15.5855H14.0846C14.4906 15.5855 14.9218 15.8467 15.1646 16.3103C15.4801 16.9124 15.923 17.6525 16.4795 18.3026C17.0239 18.9387 17.7578 19.5842 18.6763 19.8413C20.1108 20.2427 21.3541 19.6087 22.1392 18.6681C22.9085 17.7464 23.3277 16.4504 23.2228 15.1923C23.122 13.9831 23.0268 12.7225 22.9835 11.8204C22.923 10.5622 22.6592 9.05935 22.39 7.7883C21.909 5.51696 20.0569 3.83676 17.7821 3.5093C16.0376 3.25817 13.8121 3 12 3ZM6.50279 5.48889C8.22744 5.24063 10.3368 5 12 5C13.6632 5 15.7725 5.24063 17.4972 5.4889C18.965 5.70019 20.1311 6.77489 20.4334 8.20267C20.6967 9.44565 20.9332 10.8223 20.9858 11.9164C21.0309 12.856 21.1287 14.1463 21.2297 15.3585C21.2912 16.0956 21.0342 16.8708 20.6037 17.3866C20.1889 17.8836 19.7089 18.0534 19.2153 17.9153C18.8497 17.8129 18.4327 17.509 17.9989 17.0021C17.5771 16.5094 17.2144 15.9131 16.9362 15.3822C16.4043 14.3667 15.3482 13.5855 14.0846 13.5855H9.91539C8.65178 13.5855 7.59571 14.3667 7.06374 15.3822C6.78558 15.9131 6.42285 16.5094 6.00109 17.0021C5.56723 17.509 5.15027 17.8129 4.78463 17.9153C4.29109 18.0534 3.81102 17.8836 3.39625 17.3866C2.96576 16.8708 2.70878 16.0956 2.77024 15.3585C2.87131 14.1463 2.96904 12.856 3.01418 11.9164C3.06675 10.8223 3.30329 9.44565 3.56653 8.20267C3.86891 6.77489 5.03497 5.70019 6.50279 5.48889Z" fill="#0F1729"/>
+                        </svg>
+                    </button>
+                    <button type="button" class="cmd-button" data-command="end">
+                        <svg viewBox="-5.5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.344 7.375c3.688 1.563 6.281 5.219 6.281 9.5 0 5.656-4.625 10.313-10.313 10.313-5.656 0-10.313-4.656-10.313-10.313 0-4.281 2.594-7.938 6.313-9.5v3.469c-1.938 1.313-3.25 3.5-3.25 6.031 0 4 3.25 7.25 7.25 7.25s7.25-3.25 7.25-7.25c0-2.531-1.281-4.719-3.219-6.031v-3.469zM12.031 16.813v-12.031h-3.438v12.031h3.438z"></path>
+                        </svg>
+                    </button>
+                    <button type="button" class="cmd-button" data-command="music">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.3187 2.50498C13.0514 2.35716 11.8489 3.10033 11.4144 4.29989C11.3165 4.57023 11.2821 4.86251 11.266 5.16888C11.2539 5.40001 11.2509 5.67552 11.2503 6L11.25 6.45499C11.25 6.4598 11.25 6.4646 11.25 6.46938V14.5359C10.4003 13.7384 9.25721 13.25 8 13.25C5.37665 13.25 3.25 15.3766 3.25 18C3.25 20.6234 5.37665 22.75 8 22.75C10.6234 22.75 12.75 20.6234 12.75 18V9.21059C12.8548 9.26646 12.9683 9.32316 13.0927 9.38527L15.8002 10.739C16.2185 10.9481 16.5589 11.1183 16.8378 11.2399C17.119 11.3625 17.3958 11.4625 17.6814 11.4958C18.9486 11.6436 20.1511 10.9004 20.5856 9.70089C20.6836 9.43055 20.7179 9.13826 20.7341 8.83189C20.75 8.52806 20.75 8.14752 20.75 7.67988L20.7501 7.59705C20.7502 7.2493 20.7503 6.97726 20.701 6.71946C20.574 6.05585 20.2071 5.46223 19.6704 5.05185C19.4618 4.89242 19.2185 4.77088 18.9074 4.6155L16.1999 3.26179C15.7816 3.05264 15.4412 2.88244 15.1623 2.76086C14.8811 2.63826 14.6043 2.53829 14.3187 2.50498Z" fill="#1C274C"/>
+                        </svg>
+                    </button>
+                </div class="command-row">
+                <div class="command-row">
+                    <button type="button" class="cmd-button" data-command="start_record"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 16C13.6569 16 15 14.6569 15 13C15 11.3431 13.6569 10 12 10C10.3431 10 9 11.3431 9 13C9 14.6569 10.3431 16 12 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 16.8V9.2C3 8.0799 3 7.51984 3.21799 7.09202C3.40973 6.71569 3.71569 6.40973 4.09202 6.21799C4.51984 6 5.0799 6 6.2 6H7.25464C7.37758 6 7.43905 6 7.49576 5.9935C7.79166 5.95961 8.05705 5.79559 8.21969 5.54609C8.25086 5.49827 8.27836 5.44328 8.33333 5.33333C8.44329 5.11342 8.49827 5.00346 8.56062 4.90782C8.8859 4.40882 9.41668 4.08078 10.0085 4.01299C10.1219 4 10.2448 4 10.4907 4H13.5093C13.7552 4 13.8781 4 13.9915 4.01299C14.5833 4.08078 15.1141 4.40882 15.4394 4.90782C15.5017 5.00345 15.5567 5.11345 15.6667 5.33333C15.7216 5.44329 15.7491 5.49827 15.7803 5.54609C15.943 5.79559 16.2083 5.95961 16.5042 5.9935C16.561 6 16.6224 6 16.7454 6H17.8C18.9201 6 19.4802 6 19.908 6.21799C20.2843 6.40973 20.5903 6.71569 20.782 7.09202C21 7.51984 21 8.0799 21 9.2V16.8C21 17.9201 21 18.4802 20.782 18.908C20.5903 19.2843 20.2843 19.5903 19.908 19.782C19.4802 20 18.9201 20 17.8 20H6.2C5.0799 20 4.51984 20 4.09202 19.782C3.71569 19.5903 3.40973 19.2843 3.21799 18.908C3 18.4802 3 17.9201 3 16.8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+
+                    <button type="button" class="cmd-button" data-command="stop_record"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 3L6.00007 6.00007M21 21L19.8455 19.8221M9.74194 4.06811C9.83646 4.04279 9.93334 4.02428 10.0319 4.01299C10.1453 4 10.2683 4 10.5141 4H13.5327C13.7786 4 13.9015 4 14.015 4.01299C14.6068 4.08078 15.1375 4.40882 15.4628 4.90782C15.5252 5.00345 15.5802 5.11345 15.6901 5.33333C15.7451 5.44329 15.7726 5.49827 15.8037 5.54609C15.9664 5.79559 16.2318 5.95961 16.5277 5.9935C16.5844 6 16.6459 6 16.7688 6H17.8234C18.9435 6 19.5036 6 19.9314 6.21799C20.3077 6.40973 20.6137 6.71569 20.8055 7.09202C21.0234 7.51984 21.0234 8.0799 21.0234 9.2V15.3496M19.8455 19.8221C19.4278 20 18.8702 20 17.8234 20H6.22344C5.10333 20 4.54328 20 4.11546 19.782C3.73913 19.5903 3.43317 19.2843 3.24142 18.908C3.02344 18.4802 3.02344 17.9201 3.02344 16.8V9.2C3.02344 8.0799 3.02344 7.51984 3.24142 7.09202C3.43317 6.71569 3.73913 6.40973 4.11546 6.21799C4.51385 6.015 5.0269 6.00103 6.00007 6.00007M19.8455 19.8221L14.5619 14.5619M14.5619 14.5619C14.0349 15.4243 13.0847 16 12 16C10.3431 16 9 14.6569 9 13C9 11.9153 9.57566 10.9651 10.4381 10.4381M14.5619 14.5619L10.4381 10.4381M10.4381 10.4381L6.00007 6.00007" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+
+                    <button type="button" class="cmd-button" data-command="save_photo"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11C8.10457 11 9 10.1046 9 9C9 7.89543 8.10457 7 7 7C5.89543 7 5 7.89543 5 9C5 10.1046 5.89543 11 7 11Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.56055 21C11.1305 11.1 15.7605 9.35991 21.0005 15.7899" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.28 3H5C3.93913 3 2.92172 3.42136 2.17157 4.17151C1.42142 4.92165 1 5.93913 1 7V17C1 18.0609 1.42142 19.0782 2.17157 19.8284C2.92172 20.5785 3.93913 21 5 21H17C18.0609 21 19.0783 20.5785 19.8284 19.8284C20.5786 19.0782 21 18.0609 21 17V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.75 0.829956V8.82996" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.9508 5.63L18.7508 8.83L15.5508 5.63" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                </div class="command-row">
+                <div class="bluebox">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.46447 15.5355C6.51185 13.5829 6.51185 10.4171 8.46447 8.46447M5.63592 18.364C2.1212 14.8493 2.1212 9.15077 5.63592 5.63605M15.5355 15.5355C17.4881 13.5829 17.4881 10.4171 15.5355 8.46447M18.364 18.364C21.8788 14.8493 21.8788 9.15077 18.364 5.63605M13 12.0001C13 12.5523 12.5523 13.0001 12 13.0001C11.4477 13.0001 11 12.5523 11 12.0001C11 11.4478 11.4477 11.0001 12 11.0001C12.5523 11.0001 13 11.4478 13 12.0001Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h2><span id="ultrasonic">? cm</span></h2>
+                </div>
+            </div>
+            </section>
+            </div>
+            </div>
+            <div class="controls">
+            <div class="contenedor">
+                    <div class="command-row">
+
+                                <button type="button" class="cmd-button" data-command="mode 1"> <h1>1</h1> </button>
+                                <button type="button" class="cmd-button" data-command="mode 2"> <h1>2</h1> </button>
+                                <button type="button" class="cmd-button" data-command="mode 3"> <h1>3</h1> </button>
+                                <button type="button" class="cmd-button" data-command="mode 4"> <h1>4</h1> </button>
+                                <button type="button" class="cmd-button" data-command="mode 5"> <h1>5</h1> </button>
+                                <button type="button" class="cmd-button" data-command="mode 6"> <h1>6</h1> </button>
+                                <button type="button" class="cmd-button" data-command="mode 7"> <h1>7</h1> </button>
+                                <button type="button" class="cmd-button" data-command="mode 8"> <h1>8</h1> </button>
+                                <button type="button" class="cmd-button" data-command="mode 9"> <h1>9</h1> </button>
+                                </button>
+                    </div>
+                <div class="command-row">
+                    <input class="inp" id="inp1" type="text" placeholder="Escuchar texto">
+                    <button type="button" class="cmd-button btn-inp" data-command="inp" data-num="1"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> <path d="M11.5003 12H5.41872M5.24634 12.7972L4.24158 15.7986C3.69128 17.4424 3.41613 18.2643 3.61359 18.7704C3.78506 19.21 4.15335 19.5432 4.6078 19.6701C5.13111 19.8161 5.92151 19.4604 7.50231 18.7491L17.6367 14.1886C19.1797 13.4942 19.9512 13.1471 20.1896 12.6648C20.3968 12.2458 20.3968 11.7541 20.1896 11.3351C19.9512 10.8529 19.1797 10.5057 17.6367 9.81135L7.48483 5.24303C5.90879 4.53382 5.12078 4.17921 4.59799 4.32468C4.14397 4.45101 3.77572 4.78336 3.60365 5.22209C3.40551 5.72728 3.67772 6.54741 4.22215 8.18767L5.24829 11.2793C5.34179 11.561 5.38855 11.7019 5.407 11.8459C5.42338 11.9738 5.42321 12.1032 5.40651 12.231C5.38768 12.375 5.34057 12.5157 5.24634 12.7972Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                </div>
+                <div class="command-row">
+                    <input class="inp" id="inp2" type="text" placeholder="Decir texto">
+                    <button type="button" class="cmd-button btn-inp" data-command="inp" data-num="2"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> <path d="M11.5003 12H5.41872M5.24634 12.7972L4.24158 15.7986C3.69128 17.4424 3.41613 18.2643 3.61359 18.7704C3.78506 19.21 4.15335 19.5432 4.6078 19.6701C5.13111 19.8161 5.92151 19.4604 7.50231 18.7491L17.6367 14.1886C19.1797 13.4942 19.9512 13.1471 20.1896 12.6648C20.3968 12.2458 20.3968 11.7541 20.1896 11.3351C19.9512 10.8529 19.1797 10.5057 17.6367 9.81135L7.48483 5.24303C5.90879 4.53382 5.12078 4.17921 4.59799 4.32468C4.14397 4.45101 3.77572 4.78336 3.60365 5.22209C3.40551 5.72728 3.67772 6.54741 4.22215 8.18767L5.24829 11.2793C5.34179 11.561 5.38855 11.7019 5.407 11.8459C5.42338 11.9738 5.42321 12.1032 5.40651 12.231C5.38768 12.375 5.34057 12.5157 5.24634 12.7972Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                </div>
+                <div class="command-row">
+                    <input class="inp" id="inp3" type="text" placeholder="Mostrar texto">
+                    <button type="button" class="cmd-button btn-inp" data-command="inp" data-num="3"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> <path d="M11.5003 12H5.41872M5.24634 12.7972L4.24158 15.7986C3.69128 17.4424 3.41613 18.2643 3.61359 18.7704C3.78506 19.21 4.15335 19.5432 4.6078 19.6701C5.13111 19.8161 5.92151 19.4604 7.50231 18.7491L17.6367 14.1886C19.1797 13.4942 19.9512 13.1471 20.1896 12.6648C20.3968 12.2458 20.3968 11.7541 20.1896 11.3351C19.9512 10.8529 19.1797 10.5057 17.6367 9.81135L7.48483 5.24303C5.90879 4.53382 5.12078 4.17921 4.59799 4.32468C4.14397 4.45101 3.77572 4.78336 3.60365 5.22209C3.40551 5.72728 3.67772 6.54741 4.22215 8.18767L5.24829 11.2793C5.34179 11.561 5.38855 11.7019 5.407 11.8459C5.42338 11.9738 5.42321 12.1032 5.40651 12.231C5.38768 12.375 5.34057 12.5157 5.24634 12.7972Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="content" id="tab2">
+            <br/>
+            <table class="matrix">
+                    <tr>
+                        <td><button class="led" data-position="0 0"></button></td>
+                        <td><button class="led" data-position="1 0"></button></td>
+                        <td><button class="led" data-position="2 0"></button></td>
+                        <td><button class="led" data-position="3 0"></button></td>
+                        <td><button class="led" data-position="4 0"></button></td>
+                        <td><button class="led" data-position="5 0"></button></td>
+                        <td><button class="led" data-position="6 0"></button></td>
+                        <td><button class="led" data-position="7 0"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="led" data-position="0 1"></button></td>
+                        <td><button class="led" data-position="1 1"></button></td>
+                        <td><button class="led" data-position="2 1"></button></td>
+                        <td><button class="led" data-position="3 1"></button></td>
+                        <td><button class="led" data-position="4 1"></button></td>
+                        <td><button class="led" data-position="5 1"></button></td>
+                        <td><button class="led" data-position="6 1"></button></td>
+                        <td><button class="led" data-position="7 1"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="led" data-position="0 2"></button></td>
+                        <td><button class="led" data-position="1 2"></button></td>
+                        <td><button class="led" data-position="2 2"></button></td>
+                        <td><button class="led" data-position="3 2"></button></td>
+                        <td><button class="led" data-position="4 2"></button></td>
+                        <td><button class="led" data-position="5 2"></button></td>
+                        <td><button class="led" data-position="6 2"></button></td>
+                        <td><button class="led" data-position="7 2"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="led" data-position="0 3"></button></td>
+                        <td><button class="led" data-position="1 3"></button></td>
+                        <td><button class="led" data-position="2 3"></button></td>
+                        <td><button class="led" data-position="3 3"></button></td>
+                        <td><button class="led" data-position="4 3"></button></td>
+                        <td><button class="led" data-position="5 3"></button></td>
+                        <td><button class="led" data-position="6 3"></button></td>
+                        <td><button class="led" data-position="7 3"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="led" data-position="0 4"></button></td>
+                        <td><button class="led" data-position="1 4"></button></td>
+                        <td><button class="led" data-position="2 4"></button></td>
+                        <td><button class="led" data-position="3 4"></button></td>
+                        <td><button class="led" data-position="4 4"></button></td>
+                        <td><button class="led" data-position="5 4"></button></td>
+                        <td><button class="led" data-position="6 4"></button></td>
+                        <td><button class="led" data-position="7 4"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="led" data-position="0 5"></button></td>
+                        <td><button class="led" data-position="1 5"></button></td>
+                        <td><button class="led" data-position="2 5"></button></td>
+                        <td><button class="led" data-position="3 5"></button></td>
+                        <td><button class="led" data-position="4 5"></button></td>
+                        <td><button class="led" data-position="5 5"></button></td>
+                        <td><button class="led" data-position="6 5"></button></td>
+                        <td><button class="led" data-position="7 5"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="led" data-position="0 6"></button></td>
+                        <td><button class="led" data-position="1 6"></button></td>
+                        <td><button class="led" data-position="2 6"></button></td>
+                        <td><button class="led" data-position="3 6"></button></td>
+                        <td><button class="led" data-position="4 6"></button></td>
+                        <td><button class="led" data-position="5 6"></button></td>
+                        <td><button class="led" data-position="6 6"></button></td>
+                        <td><button class="led" data-position="7 6"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="led" data-position="0 7"></button></td>
+                        <td><button class="led" data-position="1 7"></button></td>
+                        <td><button class="led" data-position="2 7"></button></td>
+                        <td><button class="led" data-position="3 7"></button></td>
+                        <td><button class="led" data-position="4 7"></button></td>
+                        <td><button class="led" data-position="5 7"></button></td>
+                        <td><button class="led" data-position="6 7"></button></td>
+                        <td><button class="led" data-position="7 7"></button></td>
+                    </tr>
+            </table>
+            <br/>
+            <div class="command-row">
+                <label for="colorPicker" id="colorButton" class="colorButton"> Elegir color </label>
+                <input type="color" id="colorPicker" class="colorPicker" value="#2563eb">
+                <button type="button" class="cmd-button" data-command="fill">
+                    <svg viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><path d="M4,29.987l24,0c0.828,0 1.5,-0.672 1.5,-1.5c0,-0.827 -0.672,-1.5 -1.5,-1.5l-24,0c-0.828,0 -1.5,0.673 -1.5,1.5c0,0.828 0.672,1.5 1.5,1.5Z"/><path d="M9.138,22.244c1.323,0.328 2.775,0.118 3.995,-0.702l9.873,-6.712c0.458,-0.308 0.58,-0.929 0.273,-1.388l-6.717,-10c-0.308,-0.458 -0.929,-0.58 -1.388,-0.272c0,-0 -6.027,4.048 -9.961,6.691c-2.293,1.539 -2.903,4.646 -1.363,6.938c0.725,1.08 1.53,2.279 2.256,3.359c0.738,1.099 1.836,1.812 3.032,2.086Zm11.448,-9.223l-15.418,0c0.207,-0.591 0.599,-1.124 1.16,-1.5c-0,-0 9.131,-6.133 9.131,-6.133l5.127,7.633Z"/><path d="M26.339,15.455c-0.185,-0.284 -0.5,-0.455 -0.839,-0.455c-0.339,-0 -0.654,0.171 -0.839,0.455c0,0 -1.274,1.965 -2.039,3.732c-0.379,0.876 -0.622,1.717 -0.622,2.313c-0,1.932 1.568,3.5 3.5,3.5c1.932,0 3.5,-1.568 3.5,-3.5c-0,-0.596 -0.243,-1.437 -0.622,-2.313c-0.765,-1.767 -2.039,-3.732 -2.039,-3.732Z"/></svg>
+                </button>
+                <button type="button" class="cmd-button" data-command="eraser">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.4096 5.50506C13.0796 3.83502 13.9146 3 14.9522 3C15.9899 3 16.8249 3.83502 18.4949 5.50506C20.165 7.1751 21 8.01013 21 9.04776C21 10.0854 20.165 10.9204 18.4949 12.5904L14.3017 16.7837L7.21634 9.69828L11.4096 5.50506Z" fill="#1C274C"/>
+                        <path d="M6.1557 10.759L13.2411 17.8443L12.5904 18.4949C12.2127 18.8727 11.8777 19.2077 11.5734 19.5H21C21.4142 19.5 21.75 19.8358 21.75 20.25C21.75 20.6642 21.4142 21 21 21H9C7.98423 20.9747 7.1494 20.1393 5.50506 18.4949C3.83502 16.8249 3 15.9899 3 14.9522C3 13.9146 3.83502 13.0796 5.50506 11.4096L6.1557 10.759Z" fill="#1C274C"/>
+                    </svg>
+                </button>
+                <button type="button" class="cmd-button" data-command="rainbow">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.7935 10.7934L20.4603 3.45681C20.7653 3.19859 21.2173 3.21734 21.5 3.49992C21.7826 3.78253 21.8013 4.23461 21.5431 4.53966L14.2065 13.2064M11.7935 10.7934L9.58785 12.6605C8.7162 13.3984 8.66122 14.7236 9.46875 15.5311C10.2763 16.3386 11.6015 16.2837 12.3393 15.412L14.2065 13.2064M11.7935 10.7934L14.2065 13.2064M10.3398 17.75C10.3398 19.5449 8.88477 21 7.08984 21H2.5L2.7103 20.8948C3.74629 20.3768 4.26276 19.1914 3.93667 18.0799C3.87245 17.8611 3.83395 17.6334 3.85777 17.4066C4.02929 15.7731 5.41089 14.5 7.08984 14.5C8.88477 14.5 10.3398 15.955 10.3398 17.75Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </button>
+        </div>
+
+        <div class="content" id="tab3">
+            <table>
+            <tr> <td>
+                <label for="servo0">Servo 0: <span id="servo0_">90</span>º</label>
+                <input id="servo0" type="range" min="0" max="180" value="90">
+                <label for="servo1">Servo 1: <span id="servo1_">90</span>º</label>
+                <input id="servo1" type="range" min="0" max="180" value="90">
+                <label for="servo2">Servo 2: <span id="servo2_">90</span>º</label>
+                <input id="servo2" type="range" min="0" max="180" value="90">
+                <label for="servo3">Servo 3: <span id="servo3_">90</span>º</label>
+                <input id="servo3" type="range" min="0" max="180" value="90">
+                <label for="servo4">Servo 4: <span id="servo4_">90</span>º</label>
+                <input id="servo4" type="range" min="0" max="180" value="90">
+            </td>
+            <td>
+                <label for="servo5">Servo 5: <span id="servo5_">90</span>º</label>
+                <input id="servo5" type="range" min="0" max="180" value="90">
+                <label for="servo6">Servo 6: <span id="servo6_">90</span>º</label>
+                <input id="servo6" type="range" min="0" max="180" value="90">
+                <label for="servo7">Servo 7: <span id="servo7_">90</span>º</label>
+                <input id="servo7" type="range" min="0" max="180" value="90">
+                <label for="servo8">Servo 8: <span id="servo8_">90</span>º</label>
+                <input id="servo8" type="range" min="0" max="180" value="90">
+                <label for="servo9">Servo 9: <span id="servo9_">90</span>º</label>
+                <input id="servo9" type="range" min="0" max="180" value="90">
+            </td></tr>
+            </table>
+            <div class="command-buttons" aria-label="Controles de movimiento del robot">
+                <button type="button" class="cmd-button" data-command="send_servo">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.5003 12H5.41872M5.24634 12.7972L4.24158 15.7986C3.69128 17.4424 3.41613 18.2643 3.61359 18.7704C3.78506 19.21 4.15335 19.5432 4.6078 19.6701C5.13111 19.8161 5.92151 19.4604 7.50231 18.7491L17.6367 14.1886C19.1797 13.4942 19.9512 13.1471 20.1896 12.6648C20.3968 12.2458 20.3968 11.7541 20.1896 11.3351C19.9512 10.8529 19.1797 10.5057 17.6367 9.81135L7.48483 5.24303C5.90879 4.53382 5.12078 4.17921 4.59799 4.32468C4.14397 4.45101 3.77572 4.78336 3.60365 5.22209C3.40551 5.72728 3.67772 6.54741 4.22215 8.18767L5.24829 11.2793C5.34179 11.561 5.38855 11.7019 5.407 11.8459C5.42338 11.9738 5.42321 12.1032 5.40651 12.231C5.38768 12.375 5.34057 12.5157 5.24634 12.7972Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+
+                <pre id="telemetryBox" class="telemetry">
+        </pre>
+
+
+
+
+
+
+
+
+
+
+      </section>
+      <section class="panel2">
+        <div class="status">
+          <span id="dot" class="dot"></span>
+          <span id="status">Cargando JavaScript...</span>
+        </div>
+
+        <!--
+          Vídeo antiguo por WebRTC (ya no se usa; se deja comentado por si
+          se quisiera recuperar en el futuro). El vídeo ahora llega
+          codificado en H264 dentro de "robot-telemetry" y se decodifica
+          con la WebCodecs API sobre el <canvas> de abajo. Ahora en cambio
+          se mandan píxeles crudos (sin compresión) y se pintan
+          directamente en el <canvas> con ImageData.
+
+          <video id="remoteVideo" autoplay playsinline controls muted></video>
+        -->
+        <!-- Se usa <img> en vez de <canvas>: así el navegador decodifica y
+             pinta el JPEG de forma nativa, sin pasar por nuestro propio
+             código de decodificación (más simple y más rápido). -->
+        <img src="https://carlosca.pythonanywhere.com/static/bg.png" id="remoteImage">
+
+        <p>URL del servidor que debe usar el robot: <code id="serverUrl">pendiente...</code></p>
+      </section>
+    </div>
+  </main>
+
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="/static/viewer.js"></script>
+    <script src="/static/menu.js"></script>
+</body>
+</html>

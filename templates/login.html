@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+    
+  <link rel="icon" href="{{ url_for('static',filename='icon.ico') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+  
+    <title>Acceso privado</title>
+    </style>
+
+</head>
+
+
+<body>
+
+<h2>Zona privada</h2>
+
+<form id="loginForm">
+
+    <input
+        id="token"
+        type="password"
+        placeholder="Introduce el token"
+        autocomplete="off"
+        required
+    >
+
+    <br>
+
+    <button type="submit">
+        Entrar
+    </button>
+
+</form>
+
+
+<p id="error" class="error"></p>
+
+
+<script>
+
+document.getElementById("loginForm").addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+        const token =
+            document.getElementById("token").value.trim();
+
+
+        if (!token) {
+
+            document.getElementById("error").textContent =
+                "Introduce un token";
+
+            return;
+        }
+
+
+        // Redirige añadiendo el token a la URL
+        window.location.href =
+            "/?token=" + encodeURIComponent(token);
+
+    }
+);
+
+</script>
+
+
+</body>
+</html>
