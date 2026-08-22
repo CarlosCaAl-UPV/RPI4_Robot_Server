@@ -7,3 +7,6 @@ The server acts as an online dashboard for a robot powered by a Raspberry Pi 4. 
 - Sending commands to the robot
 - Receiving sensor data
 - Streaming video from the robot
+
+The robot dashboard keeps the root URL (`/`). The personal project is available
+from `/web/`, and its index includes the link back to the robot dashboard.

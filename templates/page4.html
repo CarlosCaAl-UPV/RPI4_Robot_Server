@@ -1,0 +1,57 @@
+{% extends 'base/base.html' %}
+
+{% block titulo %}
+    Errores
+{% endblock %}
+
+{% block nombre %}
+    Errores
+{% endblock %}
+
+{% block contenido %}
+    <div class="download"> <a href="page4?error=error01"> Error01 </a> </div>
+    <div class="download"> <a href="page4?error=error02"> Error02 </a> </div>
+    <div class="download"> <a href="page4?error=error03"> Error03 </a> </div>
+    <div class="texto-desplegable">
+        <h5> Fallo al iniciar el servidor </h5>
+        <font><h6> Si el servidor no se inicia correctamente, puede ser causa
+            de una mala conexión WiFi, de una IP incorrecta o de utilizar un puerto
+            ocupado. </h6>
+            <div class="subtexto-desplegable">
+                <h5> Si no estás conectado a internet, haz click aquí. </h5>
+                <font><h6> Conéctate a un WiFi en la esquina superior derecha.  </h6>
+                    <div class="subtexto-desplegable">
+                        <h5> Si no puedes conectarte a internet, haz click aquí. </h5>
+                        <font><h6> Comprueba la contraseña. Puedes probar
+                            a conectarte a otra red.  </h6><font>
+                    </div>
+                <font>
+            </div>
+            <div class="subtexto-desplegable">
+                <h5> Si estás conectado correctamente a internet y el problema persiste, haz click aquí. </h5>
+                <font><h6> Fallo en la apertura del servidor </h6>
+                    <div class="subtexto-desplegable">
+                        <h5> Comprobar IP </h5>
+                        <font><h6> Escribe este comando en el terminal:  </h6>
+                            <div class="copyfield"> <span id="copytext"> ifconfig </span>
+                            <button id="copybutton"> Copiar </button> </div>
+                            <script type="text/javascript" src="{{ url_for('personal.static',filename='js/copy.js') }}"></script>
+                            <h6> Fíjate en el tercer párrafo, segunda línea, a la derecha de "inet". 
+                                Esa IP debe coincidir con la del servidor </h6><font>
+                    </div>
+                    <div class="subtexto-desplegable">
+                        <h5> Comprobar Puertos </h5>
+                        <font><h6> Es posible que estés ocupando los puertos disponibles.
+                            Reinicia el ordenador y comprueba si funciona. </h6>
+                        <div class="subtexto-desplegable">
+                            <h5> ¿Sigue sin funcionar? </h5>
+                            <font><h6> Cambia el puerto seleccionado en el código. </h6>
+                            </font>
+                        </div>
+                        </font>
+                    </div>
+                <font>
+            </div>
+        <font>
+    </div>
+{% endblock %}

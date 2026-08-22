@@ -1,0 +1,72 @@
+.top{
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 39.6px;
+    height: 39.6px;
+    z-index: -1;
+}
+.top-box{
+    width: 0px;
+    height: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    transition: .2s;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+}
+.top-button{
+    background-color: var(--color3);
+    border: 1px solid var(--color2);
+    border-radius: 50%;
+    cursor: hand;
+    transition: .2s;
+    transform: translate(-10%,-10%);
+    z-index: -1;
+}
+.top-button i{
+    position: absolute;
+    font-size: 30px;
+    top: 48%;
+    left: 50%;
+    color: var(--color2);
+    transform: translate(-50%,-50%) scale(0);
+    transition: .2s;
+    text-decoration: none;
+    text-decoration: bold;
+}
+.show{
+    z-index: 10;
+}
+.show .top-button{
+    animation: popup .3s ease;
+    width: 39.6px;
+    height: 39.6px;
+    z-index: 11;
+}
+.show:hover g{
+    fill: var(--color1);
+}
+.show .top-box{
+    animation: popup .3s ease;
+    width: 39.6px;
+    height: 39.6px;
+    z-index: 11;
+}
+.show i{
+    font: bold;
+    transform: translate(-50%,-50%) scale(1);
+}
+@keyframes popup {
+    0%{
+        width: 0px;
+        height: 0px;
+    }
+    50%{
+        width: 48px;
+        height: 48px;
+    }
+    100%{
+        width: 39.6px;
+        height: 39.6px;
+    }
+}

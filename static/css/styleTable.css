@@ -1,0 +1,86 @@
+            .tabla{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .tabla tr:first-child{
+                background: var(--color1);
+                font-size: large;
+                font-weight: bold;
+            }
+            .tabla td{
+                margin: 10px;
+                padding: 10px;
+                border: 1px solid var(--color2);
+                font-size: medium;
+            }
+            .tabla td font{
+                font-size: medium;
+                color: var(--color2);
+            }
+            .tabla tr:first-child td font{
+                font-size: medium;
+            }
+            .tabla2{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .tabla2 tr:first-child{
+                background: var(--color1);
+                font-size: large;
+                font-weight: bold;
+            }
+            .tabla2 td{
+                margin: 10px;
+                padding: 10px;
+                border: 1px solid var(--color2);
+                font-size: medium;
+            }
+            .tabla2 td font{
+                font-size: medium;
+                color: var(--color2);
+            }
+            .tabla2 tr:first-child td font{
+                font-size: medium;
+            }
+            .tabla2 tr td:first-child{
+                background: var(--color1);
+                font-size: large;
+                font-weight: bold;
+            }
+            .tabla2 tr td:first-child font{
+                font-size: medium;
+            }
+
+
+            .calendar-table{
+                font-family: Arial, Helvetica, sans-serif;
+                display: none ;
+                margin-left: 100px;
+            }
+            .calendar-table tr:first-child{
+                background: var(--color2);
+                color: var(--color1);
+                font-weight: bold;
+            }
+            .calendar-table td{
+                margin: 10px;
+                padding: 10px;
+                border: 1px solid var(--color2);
+                font-size: xx-large;
+            }
+            .calendar-table td font{
+                font-size: xx-large;
+                color: var(--color2);
+            }
+            .calendar-table tr:first-child td font{
+                font-size: xx-large;
+                color: var(--color1);
+            }
+            .calendar-table tr:first-child td font{
+                font-size: xx-large;
+            }
+            .calendar-table td a{
+                text-decoration: none;
+            }
+            .calendar-table td a font{
+                color: var(--color1);
+                text-shadow: 1px 1px 2px black;
+            }

@@ -236,18 +236,18 @@ for (let i = 0; i < 10; i++) {
 // ==========================================================
 
 const inputs = [];
-for (let i = 1; i < 4; i++) {
+for (let i = 1; i < 5; i++) {
     inputs[i-1] = document.getElementById(`inp${i}`);
     inputs[i-1].addEventListener("keydown", function(event) {
         if (event.key === "Enter") inputCommand(i);
     });
 }
 
-input_commands = ["listen", "say", "display_text"];
+const input_commands = ["listen", "say", "display_text", ""];
 function inputCommand(num) {
   const input = document.getElementById(`inp${num}`);
   if (!input) return;
-  sendRobotCommand((input_commands[num-1] ?? "") + " " + input.value);
+  sendRobotCommand(input_commands[num-1] + " " + input.value);
   input.value = "";
 }
 

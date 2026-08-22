@@ -1,0 +1,15 @@
+{% macro list(val) %}
+    <h1> {{ val }} </h1>
+    <h2> {{ val }} </h2>
+    <h3> {{ val }} </h3>
+    <h4> {{ val }} </h4>
+    <h5> {{ val }} </h5>
+    <h6> {{ val }} </h6>
+{% endmacro %}
+
+{% macro render(field) %}
+    <p>
+        {{ field.label }}
+        {{ field(**kwargs)|safe }}
+    </p>
+{% endmacro %}

@@ -1,0 +1,163 @@
+{% extends 'base/base.html' %}
+
+{% block titulo %}
+    ENM
+{% endblock %}
+
+{% block nombre %}
+    ENM
+{% endblock %}
+
+{% block contenido %}
+    <div class="whiteblock">
+        <br/>
+        <h1>
+            Enfermedades Neuromusculares
+        </h1>
+        <h2><font>
+            Los números mueven el mundo
+        </font></h2>
+    </div>
+    <div class="whiteblock"><center>
+        <a href="#def"><div class="appear" id="appear1"><div class="no-display" id="appear-content1">
+            <img class="image-icon" src="{{ url_for('personal.static',filename='img/enm/buscar.gif') }}">
+            ¿Qué son?
+        </div></div></a>
+        <a href="#causas"><div class="appear" id="appear2"><div class="no-display" id="appear-content2">
+            <img class="image-icon" src="{{ url_for('personal.static',filename='img/enm/microscopio.gif') }}">
+            Causas
+        </div></div></a>
+        <a href="#sintomas"><div class="appear" id="appear3"><div class="no-display" id="appear-content3">
+            <img class="image-icon" src="{{ url_for('personal.static',filename='img/enm/silla-de-ruedas.gif') }}">
+            Síntomas
+        </div></div></a>
+        <a href="#tratamientos"><div class="appear" id="appear4"><div class="no-display" id="appear-content4">
+            <img class="image-icon" src="{{ url_for('personal.static',filename='img/enm/tableta.gif') }}">
+            Tratamientos
+        </div></div></a>
+        <a href="#objetivo"><div class="appear" id="appear5"><div class="no-display" id="appear-content5">
+            <img class="image-icon" src="{{ url_for('personal.static',filename='img/enm/cohete.gif') }}">
+            Objetivo
+        </div></div></a>
+    </center></div>
+    <div class="whiteblock" id="def">
+        <h3>
+            ¿Qué son las Enfermedades Neuromusculares?
+        </h3>
+        <br/>
+        <h5><font>
+            <ol>
+                <li> Conjunto de más de 150 patologías </li>
+                <li> Se consideran enfermedades raras </li>
+                <li> Son crónicas y degenerativas </li>
+                <li> Afectan a los nervios y músculos </li>
+            </ol></font></h5>
+        <h5><font>
+        <div class="display-field-white">
+            <div class="display-btn" id="display-btn1"> ¿Cómo es la situacion en España? </div>
+            <div class="displayed" id="displayed1"> Más de 60.000 habitantes tienen enm </div>
+        </div></font></h5>
+        <h5><font>
+        <div class="display-field-white">
+            <div class="display-btn" id="display-btn2"> ¿A qué edades aparece? </div>
+            <div class="displayed" id="displayed2"> La gran mayoría se diagnostica en la niñez </div>
+        </div></font></h5>
+        <td><img class="image-medium2" src="{{ url_for('personal.static',filename='img/enm/ENM-Tipos.png') }}"></td>
+        <br/>
+    </div>
+    <div class="whiteblock" id="causas">
+        <h3> Causas </h3>
+        <h4> Origen </h4>
+        <br/>
+        <table><tr><td><h5><font><ol>
+            <li> Hereditario </li>
+            <li> Alteración genética </li>
+            <li> Adquirido </li>
+            <li> Mal sistema inmune </li>
+            <li> Desconocido </li>
+        </ol></font></h5><br/></td>
+        <td><img class="image-icon" src="{{ url_for('personal.static',filename='img/enm/adn.gif') }}"></td>
+        <tr/></table>
+        <h4> Focos principales </h4><br/>
+        <h5><font><ol>
+            <li> Músculos </li>
+            <li> Union neuromuscular (entre nervios y músculos) </li>
+            <li> Terminaciones nerviosas (médula y columna vertebral) </li>
+            <li> Nervios periféricos (se dirigen a los músculos) </li>
+            <li> Motoneurona espinal (controla motores) </li>
+        </ol></font></h5>
+    </div>
+    <div class="whiteblock" id="sintomas">
+        <h3>
+            Síntomas
+        </h3>
+        <br/>
+        <table><tr><td>
+        <button class="calendar-button" id="sbA"> Musculares </button>
+        <button class="calendar-button" id="sbB"> Respiratorios </button>
+        <button class="calendar-button" id="sbC"> Cardíacos </button>
+        <button class="calendar-button" id="sbD"> Digestivos </button>
+        </td><td>
+        <div class="select" id="stA"><h5><font><ol>
+            <li> Disminución de tono muscular (hipotonía) </li>
+            <li> Debilitamiento del movimiento y dependencia de otras personas </li>
+            <li> Aumento o disminuición volumen muscular (hipertrofia/atrofia) </li>
+        </ol></font></h5></div>
+        <div class="select" id="stB"><h5><font><ol>
+            <li> Musculatura lisa debilitada (diafragma principalmente) </li>
+            <li> Insuficiente fuerza para respirar </li>
+        </ol></font></h5></div>
+        <div class="select" id="stC"><h5><font><ol>
+            <li> Musculatura cardíaca debilitada </li>
+            <li> Muchos posibles problemas </li>
+        </ol></font></h5></div>
+        <div class="select" id="stD"><h5><font><ol>
+            <li> Musculatura lisa debilitada </li>
+            <li> Estreñimiento </li>
+            <li> Desnutrición </li>
+        </ol></font></h5></div>
+        </td></tr></table>
+    </div>
+    <div class="whiteblock" id="tratamientos">
+        <h3> Tratamientos </h3>
+        <h5><font> Actualmente no existe un tratamiento a largo plazo, el objetivo es el de mejorar la calidad de vida de los pacientes. </font></h5>
+        <h4> Asistencia </h4>
+        <br/>
+        <h5><font><ol>
+            <li> Dispositivos permiten mover algunos músculos </li>
+            <li> Objetos cotidianos adaptados </li>
+            <li> Sillas de ruedas o andadores </li>
+            <li> Aparatos ortopédicos </li>
+        </ol></font></h5><br/>
+        <div class="display-field-white"><h5><font>
+            <div class="display-btn" id="display-btn3"> Otra forma de asistencia </div>
+            <div class="displayed" id="displayed3"> Los pacientes son siempre acompañados y cuidados por otras personas </div>
+        </div></font></h5>
+        <br/>
+        <h4> Medicamentos </h4>
+        <br/>
+        <h5><font><ol>
+            <li> Corticoides </li>
+            <li> Inmunosupresores </li>
+            <li> Suministro de enzimas ausentes </li>
+            <li> Terapia genética </li>
+        </ol></font></h5><br/>
+        <br/>
+        <h4> Fisioterapia y cuidado nutricional </h4>
+        <br/>
+        <h5><font><ol>
+            <li> Reforzar musculatura </li>
+            <li> Mantener buena postura para evitar deformidades </li>
+            <li> Control nutricional y respiratorio </li>
+        </ol></font></h5><br/>
+        <h5><font>
+    </div>
+    <div class="whiteblock" id="objetivo">
+        <h3> Mi objetivo </h3>
+        <img class="image-icon" src="{{ url_for('personal.static',filename='img/enm/idea.gif') }}">
+        <h5><font> Mi objetivo en este proyecto es el de mejorar la calidad de vida a los pacientes. Creo en la ciencia como solución al problema planteado.
+        Para proporcionarles esa asistencia y cuidado que necesitan, crearé un robot capaz de ayudarles a llevar a cabo las acciones cotidianas de
+        una manera prácticamente independiente.
+        </h5></font>
+    </div>
+{% endblock %}

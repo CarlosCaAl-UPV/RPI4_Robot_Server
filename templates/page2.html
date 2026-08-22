@@ -1,0 +1,228 @@
+{% extends 'base/base.html' %}
+
+{% block titulo %}
+    Tutorial
+{% endblock %}
+
+{% block nombre %}
+    Tutorial
+{% endblock %}
+
+{% block contenido %}
+    <div class="whiteblock" id="block1">
+        <br/>
+        <h4>
+            Descarga y programa en la Raspberry Pi
+        </h4>
+        <br/>
+        <h5>
+            1. Conectar robot a un monitor
+        </h5>
+        <br/>
+        <h6>
+            Conecta un cable hdmi en la salida 10/11 del ordenador del robot.
+            Conecta un monitor (pantalla) a dicho cable. Tanto el robot como el
+            monitor deben estar conectados o bien a la corriente o bien a la batería
+            del robot.
+        </h6>
+        <br/>
+        <h5>
+            2. Descarga de Python3 y de los módulos correspondientes
+        </h5>
+        <br/>
+        <h6>
+            2.1. Dirígete al menú principal superior, haz posiciona el ratón sobre descargas y haz click sobre "Código1", un enlace que aparece debajo de "Descargas".
+            <div class="download"> <a href="https://github.com/CarlosCaAl/ProyectoPersonalCode/blob/main/Robot.zip" download=""> Código1 </a> </div>
+        <h6>
+            2.2. Descomprime el archivo (Click derecho > extraer).
+            La carpeta obtenida debe encontrarse en la carpeta de Descargas (Downloads).
+            <br/><br/>
+            2.3. Abre una ventana en el terminal (Ctrl+Alt+T).
+            <br/><br/>
+            2.4. Copia el siguiente comando. Pégalo en el terminal (Click derecho). Y
+            ejecútalo (Enter). Esto durará varios minutos y se requiere una buena
+            conexión WiFi.
+        </h6>
+        <br/>
+        <div class="copyfield"> <span id="copytext1"> sudo bash /home/pi/Downloads/Robot/download.sh </span>
+        <button id="copybutton1"> Copiar </button> </div>
+        <br/>
+        <table><tr>
+                <td><img class="image-medium" src="{{ url_for('personal.static',filename='img/configinterfaz1.png') }}"></td>
+            <td>
+                <h5>
+                    3. Habilita las interfaces necesarias
+                </h5>
+                <br/> <br/>
+                <h6>
+                    (Imagen 1) Abre el menú principal de la raspberry.
+                    <br/> <br/>
+                    (Imagen 2) Dirígete a Preferencias --> Configuración de RaspberryPi.
+                    <br/> <br/>
+                    (Imagen 3) Ves a la sección de Interfaces.
+                    <br/> <br/>
+                    (Imagen 4) Habilita todas las interfaces.
+                </h6>
+            </td>
+        </tr></table>
+        <table><tr>
+            <td><img class="image-medium2" src="{{ url_for('personal.static',filename='img/configinterfaz2.png') }}"></td>
+            <td><img class="image-medium2" src="{{ url_for('personal.static',filename='img/configinterfaz3.png') }}"></td>
+            <td><img class="image-medium2" src="{{ url_for('personal.static',filename='img/configinterfaz4.png') }}"></td>
+        </tr></table>
+        <br/><br/>
+        <h5>
+            4. Consigue la IP del servidor y registra tu correo
+        </h5>
+        <br/>
+        <h6>
+            4.1. Conéctate a un WiFi. Abre una ventana en el terminal (Ctrl+Alt+T).
+        </h6>
+        <br/><br/>
+        <table><tr>
+            <td>
+                <h6> 4.2. Desbloquea las aplicaciones menos seguras en tu cuenta de google. </h6>
+                <div class="download"> <a href="https://support.google.com/accounts/answer/6010255?hl=es&visit_id=637975443926941956-4076669436&p=lsa_blocked&rd=1#zippy=%2Csi-tu-cuenta-tiene-activado-el-acceso-de-aplicaciones-menos-seguras"> Google </a> </div>
+                <h6> (Imagen 1): Inicia sesión. Presiona 'Si tu cuenta tiene desactivado el acceso de aplicaciones menos seguras'.<br/>
+                    (Imagen 2): Presiona 'Puedes volver a activarlo'. Y actívalo.
+                </h6>
+            </td>
+            <td><img class="image-medium2" src="{{ url_for('personal.static',filename='img/gmailacceso1.png') }}"></td>
+            <td><img class="image-medium2" src="{{ url_for('personal.static',filename='img/gmailacceso2.png') }}"></td>
+        </tr></table>
+        <br/><br/>
+        <h6>
+            4.3. Ejecuta el siguiente comando.
+        </h6>
+        <br/>
+        <div class="copyfield"> <span id="copytext2"> cd /home/pi/Downloads/Robot/Programa && sudo python3 dataconfig.py </span>
+        <button id="copybutton2"> Copiar </button> </div>
+        <br/>
+        <h6>
+            4.4. Copia y escribe en el terminal la ip. (IP: tercer párrafo > segunda línea > a la derecha de "inet"). Escribe el correo que has utilizado antes. Escribe su contraseña. Escribe el correo del destinatario.
+        </h6>
+        <br/><br/>
+        <h5>
+            5. Programa la raspberry para ejecutar el código al encenderla
+        </h5>
+        <br/>
+        <h6>
+            5.1. Abre una ventana en el terminal (Ctrl+Alt+T).
+            <br/><br/>
+            5.2. Ejecuta el siguiente comando para abrir y editar el archivo de autostart.
+        </h6>
+        <br/>
+        <div class="copyfield"> <span id="copytext3"> sudo nano /home/pi/.config/lxsession/LXDE-pi/autostart </span>
+        <button id="copybutton3"> Copiar </button> </div>
+        <br/>
+        <h6>
+            5.3. Escribe estas dos líneas al final del archivo (sin espacios al principio ni al final).
+            Guarda los cambios (Ctrl+O --> Enter --> Ctrl+X).
+        </h6>
+        <br/>
+        <div class="copyfield"> <span id="copytext4"> @cd /home/pi/Downloads/Robot/Programa </span>
+        <button id="copybutton4"> Copiar </button> </div>
+        <div class="copyfield"> <span id="copytext5"> @sudo python3 main.py </span>
+        <button id="copybutton5"> Copiar </button> </div>
+        <br/>
+        <div blackclock>
+            <h6>
+                AVISO IMPORTANTE: Las siguientes líneas de texto deben estar al principio del archivo
+                Autostart, si no están, cópialas al principio. Son imprescindibles
+                para el arranque correcto del ordenador. <br/><br/>
+                @lxpanel --profile LXDE-pi <br/>
+                @pcmanfm --desktop --profile LXDE-pi <br/>
+                @xscreensaver -no-splash <br/>
+                @point-rpi <br/><br/>
+            </h6>
+        </div>
+        <h6>
+            5.4. Reinicia el ordenador para comprobar que funcione.
+            Al reiniciar comprueba que se ejecute el código.
+            Utiliza este comando:
+        </h6>
+        <br/>
+        <div class="copyfield"> <span id="copytext6"> sudo reboot </span>
+        <button id="copybutton6"> Copiar </button> </div>
+        <br/>
+        <h6>
+            5.5. Si todo funciona correctamente, apaga el ordenador y desenchúfalo.
+            Utiliza este comando:
+        </h6>
+        <br/>
+        <div class="copyfield"> <span id="copytext7"> sudo shutdown </span>
+        <button id="copybutton7"> Copiar </button> </div>
+        <br/>
+    </div>
+    <br/ id="block2">
+    <div class="whiteblock">
+        <br/>
+        <h4>
+            Descarga y programa en el ordenador cliente
+        </h4>
+        <br/>
+        <h5>
+            1. Descarga de Python3 y de los módulos correspondientes
+        </h5>
+        <br/>
+        <h6>
+            1.1.  Dirígete al menú principal superior, haz posiciona el ratón sobre descargas y haz click sobre "Código2", un enlace que aparece debajo de "Descargas".
+            <div class="download"> <a href="https://github.com/CarlosCaAl/ProyectoPersonalCode/blob/main/Robot.zip" download=""> Código2 </a> </div>
+        <h6>
+        <h6>
+            1.2.  Descomprímelo. Ahora saca de la carpeta descomprimida el archivo "App".
+            <br/><br/>
+            1.3. Abre la carpeta y ejecuta el archivo para descargar python (.exe).
+        <h6>
+            1.4. Descarga opencv2. Escribe este comando en el terminal de tu ordenador (Click derecho en el escritorio > Terminal).
+        </h6>
+        <div class="copyfield"> <span id="copytext8"> pip install opencv-contrib-python </span>
+        <button id="copybutton8"> Copiar </button> </div>
+        <br/>
+        <h5>
+            2. Edita el archivo para crear la aplicación
+        </h5>
+        <br/>
+        <h6>
+            2.1.  Dirígete a la carpeta "App/Programa".
+            Copia la ruta del archivo "main.py" (Click derecho > Copiar como ruta de acceso).
+            <br/><br/>
+            2.2. Regresa a "App". Abre "app.bat" con un editor de texto.
+            Sustituye el texto "RUTA" por la ruta que has copiado. Guárdalo.
+            <br/><br/>
+            2.3. Mueve el archivo "app.bat" al escritorio (Opcional).
+    </div>
+    <br/ id="block3">
+    <div class="whiteblock">
+        <br/>
+        <h4>
+            Inicio del código y funcionamiento
+        </h4>
+        <br/><br/>
+        <h5>
+            1. Conexión del servidor
+        </h5>
+        <br/><br/>
+        <h6>
+            1.1. Enciende el robot. Y abre el archivo "app.bat" en tu ordenador.
+            Ambos conectados a la misma red.
+            <br/><br/>
+            1.2. Escribe la IP mostrada en la pantalla del robot en el cuadro de texto de la aplicación.
+            Presiona "Connect".
+            <br/><br/>
+            Ya están conectados !!!
+        </h6>
+        <br/><br/>
+        <h5>
+            2. Funcionamiento del robot
+        </h5>
+        <br/><br/>
+        <h6>
+            2.1. El panel azul se encarga del movimiento.
+            <br/><br/>
+            2.2. El modo1 es el código principal
+            <br/><br/>
+            Ya tienes listo tu robot !!!
+        </h6>
+    </div>
+{% endblock %}

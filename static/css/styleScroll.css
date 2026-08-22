@@ -1,0 +1,13 @@
+            *::-webkit-scrollbar{
+                width: 20px;
+                background: var(--color1);
+            }
+            *::-webkit-scrollbar-thumb{
+                width: 2%;
+                background: rgba(255,255,255,.8);
+                border-radius: 10px;
+                border: 5px solid var(--color1);
+            }
+            *::-webkit-scrollbar-thumb:hover{
+                background: rgba(255,255,255,.9);
+            }

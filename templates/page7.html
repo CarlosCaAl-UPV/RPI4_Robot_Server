@@ -1,0 +1,96 @@
+{% extends 'base/base.html' %}
+
+{% block titulo %}
+    Producto
+{% endblock %}
+
+{% block nombre %}
+    Producto
+{% endblock %}
+
+{% block contenido %}
+    <div class="whiteblock">
+        <h4 id="s1">
+            Diseño del robot<br/>
+        </h4>
+        <div id="images6" class="images-large">
+            <button class="lr-button" id="leftbutton6"> &lt </button>
+            <a class="a" href="/web/static/img/3d/Boceto.PNG"><div class="image-container" id="image6a"><img class="image-xxlarge" src="{{ url_for('personal.static',filename='img/3d/Boceto.PNG') }}"><h6>1. Este fue el primer boceto y está hecho a papel, en él se puede observar la idea inicial para el robot..</h6></div></a>
+            <div class="image-container" id="image6b"><iframe width="100%" height="800pt" src="https://www.tinkercad.com/embed/bzf19kPwikt?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe><h6>2. Este diseño 3D pertenece a la planta superior del robot, donde se colocan los brazos, la cabeza, se realizan las conexiones y se encuentra el ordenador.</h6></div>
+            <div class="image-container" id="image6c"><iframe width="100%" height="800pt" src="https://www.tinkercad.com/embed/jIcSzqzIZlS?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe><h6>3. Este pertenece a la segunda planta del robot, en la cual se encuentra la pantalla LED, las pilas, pasan conexiones hacia las ruedas y hay un interruptor.</h6></div>
+            <div class="image-container" id="image6d"><iframe width="100%" height="800pt" src="https://www.tinkercad.com/embed/bG8LIRs1wws?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe><h6>4. Este fue el diseño de la cabeza del robot, la cual está articulada por 2 ejes y en ella se encuentra un sensor de ultrasonidos y una cámara.</h6></div>
+            <div class="image-container" id="image6e"><iframe width="100%" height="800pt" src="https://www.tinkercad.com/embed/axmkRgC5Kcm?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe><h6>5. Estos fueron los brazos del robot, tienen 3 ejes (para alcanzar un espacio tridimensional) y una mano, la cual se abre y se cierra por un cuarto motor.</h6></div>
+            <div class="image-container" id="image6f"><iframe width="100%" height="800pt" src="https://www.tinkercad.com/embed/056EImHS9a2?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe><h6>6. La primera planta, contiene las ruedas del robot, junto con su controlador, un soporte para al pantalla LED y partes donde atornillar las ruedas oruga.</h6></div>
+            <div class="image-container" id="image6g"><iframe width="100%" height="800pt" src="https://www.tinkercad.com/embed/4sXnqwVc833?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe><h6>7. Juntando todos los diseños, se obtiene este último diseño de todo el robot.</h6></div>
+            <button class="lr-button" id="rightbutton6"> &gt </button>
+        </div>
+        <h4 id="s2">
+            Impresión del robot<br/>
+        </h4>
+        <div id="images7" class="images-large">
+            <button class="lr-button" id="leftbutton7"> &lt </button>
+            <a class="a" href="/web/static/img/diario/Capa3a/RobotPlanta3b1.jpg"><div class="image-container" id="image7a"><img class="image-xxlarge" src="{{ url_for('personal.static',filename='img/diario/Capa3a/RobotPlanta3b1.jpg') }}"><h6>1. Planta 3 impresa. Su objetivo es contener el ordenador, sujetar las extremidades y realizar en ella las conexiones.</h6></div></a>
+            <a class="a" href="/web/static/img/diario/Capa3a/RobotPlanta3a7.jpg"><div class="image-container" id="image7b"><img class="image-xxlarge" src="{{ url_for('personal.static',filename='img/diario/Capa3a/RobotPlanta3a7.jpg') }}"><h6>2. Esta es la carcasa blanca deslizable en la cual se guardaría la Raspberry Pi 4.</h6></div></a>
+            <a class="a" href="/web/static/img/diario/Parte2/RobotParte2a.jpg"><div class="image-container" id="image7c"><img class="image-xxlarge" src="{{ url_for('personal.static',filename='img/diario/Parte2/RobotParte2a.jpg') }}"><h6>3. Planta 2 impresa. Aquí se muestra la planta 3 junto con la planta 2 abajo. Su propósito es el de contener las pilas y algunas conexiones, así como conectar la pantalla LED.</h6></div></a>
+            <a class="a" href="/web/static/img/diario/Parte2/RobotParte2b.jpg"><div class="image-container" id="image7d"><img class="image-xxlarge" src="{{ url_for('personal.static',filename='img/diario/Parte2/RobotParte2b.jpg') }}"><h6>4. Plantas 2 y 3 con la cabeza del robot.</h6></div></a>
+            <a class="a" href="/web/static/img/diario/Parte2/RobotParte2c.jpg"><div class="image-container" id="image7e"><img class="image-xxlarge" src="{{ url_for('personal.static',filename='img/diario/Parte2/RobotParte2c.jpg') }}"><h6>5. Cabeza del robot. Tiene 2 ejes y puede contener el sensor de ultrasonidos con la cámara.</h6></div></a>
+            <a class="a" href="/web/static/img/diario/Parte2/RobotParte2d.jpg"><div class="image-container" id="image7f"><img class="image-xxlarge" src="{{ url_for('personal.static',filename='img/diario/Parte2/RobotParte2d.jpg') }}"><h6>6. Brazos del robot. Gracias a estos, el robot podría ser capaz de coger objetos en un espacio tridimensional.</h6></div></a>
+            <a class="a" href="/web/static/img/diario/Resultado/RobotResultado2a.jpg"><div class="image-container" id="image7g"><img class="image-xxlarge" src="{{ url_for('personal.static',filename='img/diario/Resultado/RobotResultado2a.jpg') }}"><h6>7. Planta 1 impresa. En esta se conectarán los motores y será la base.</h6></div></a>
+            <button class="lr-button" id="rightbutton7"> &gt </button>
+        </div>
+        <h4 id="s3">
+            Construcción del robot<br/>
+        </h4>
+        <div id="images8" class="images-large">
+            <button class="lr-button" id="leftbutton8"> &lt </button>
+            <a class="a" href="/web/static/img/diario/Resultado/RobotResultado1a.jpg"><div class="image-container" id="image8a"><img class="image-xxlarge" src="{{ url_for('personal.static',filename='img/diario/Resultado/RobotResultado1a.jpg') }}"><h6>1. Parte superior del robot, con los brazos y la cabeza atornillados.</h6></div></a>
+            <a class="a" href="/web/static/img/diario/Resultado/RobotResultado2b.jpg"><div class="image-container" id="image8b"><img class="image-xxlarge" src="{{ url_for('personal.static',filename='img/diario/Resultado/RobotResultado2b.jpg') }}"><h6>2. Parte inferior del robot, después de colocar las ruedas y pegar el soporte para la pantalla LED.</h6></div></a>
+            <a class="a" href="/web/static/img/diario/Resultado/RobotResultado2c.jpg"><div class="image-container" id="image8c"><img class="image-xxlarge" src="{{ url_for('personal.static',filename='img/diario/Resultado/RobotResultado2c.jpg') }}"><h6>3. RESULTADO: Robot construido, con el ordenador ya conectado y todas las conexiones hechas.</h6></div></a>
+            <button class="lr-button" id="rightbutton8"> &gt </button>
+        </div>
+        <h4 id="s4">
+            Programación del robot<br/>
+        </h4>
+        <h6>
+            <ul>
+                <li> Componentes
+                <ul>
+                    <li> Ruedas </li>
+                    <li> Servo </li>
+                    <li> Cámara </li>
+                    <li> Ultrasonidos </li>
+                    <li> Pantalla </li>
+                    <li> Botón </li>
+                </ul></li>
+                <li> Funciones
+                <ul>
+                    <li> Hablar </li>
+                    <li> Escuchar </li>
+                    <li> Correos </li>
+                    <li> Geometría </li>
+                    <li> Pantalla </li>
+                </ul></li>
+                <li> Básicas
+                <ul>
+                    <li> Modos </li>
+                    <li> Servidor </li>
+                    <li> App </li>
+                </ul></li>
+                <li> <a href="https://drive.google.com/drive/folders/1D0x5YT6GoN6gX28dnM4k1QndJBiNmHDY?usp=sharing">Ver el código</a> </li>
+            </ul>
+        </h6>
+        <h4 id="s5">
+            Mejoras<br/>
+        </h4>
+        <h6>
+            <ul>
+                <li> Programación de minijuegos (serpiente, IA tres en ralla, saltar obstáculos) </li>
+                <li> Mejora ruedas quitando una pieza a la cadena </li>
+                <li> Protección cabeza </li>
+                <li> Enchufes inteligentes </li>
+                <li> Pensamiento (IA) a través de GPT4 </li>
+            </ul>
+        </h6>
+    </div>
+        <script type="text/javascript" src="{{ url_for('personal.static',filename='js/images2.js') }}"></script>
+{% endblock %}

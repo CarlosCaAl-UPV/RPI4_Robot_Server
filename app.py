@@ -5,6 +5,7 @@ import eventlet
 from flask import Flask, render_template, request
 from flask_socketio import SocketIO, emit, join_room
 
+from personal import personal
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "dev-secret-change-me")
@@ -16,6 +17,8 @@ socketio = SocketIO(
     cors_allowed_origins="*",
     async_mode="eventlet",
 )
+
+app.register_blueprint(personal, url_prefix="/web")
 
 VIEWER_ROOM = "viewers"
 CAMERA_ROOM = "camera"

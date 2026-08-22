@@ -1,0 +1,29 @@
+            .copyfield span{
+                background: var(--color3);
+                height: 45px;
+                margin: 10px;
+                margin-right: 0px;
+                padding: 10px;
+                font-size: large;
+                border-radius: 4px;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+                border: 2px solid var(--color2);
+                border-right: 1px solid var(--color2);
+                box-shadow: 2px 2px 4px var(--color2);
+            }
+            .copyfield button{
+                background: var(--color1);
+                height: 45px;
+                width: 75px;
+                margin: 10px;
+                margin-left: 0px;
+                padding: 10px;
+                font-size: large;
+                border-radius: 4px;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+                border: 2px solid var(--color2);
+                border-left: 1px solid var(--color2);
+                box-shadow: 2px 2px 4px var(--color2);
+            }

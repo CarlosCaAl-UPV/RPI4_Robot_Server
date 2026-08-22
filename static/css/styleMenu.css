@@ -1,0 +1,100 @@
+            .menubar nav{
+                display: none;
+            }
+            .menubar{
+                margin: 3%;
+                background: var(--color2);
+            }
+            .menubarspace{
+                background: var(--color1);
+                height: 80px;
+            }
+            .menubar font{
+                display: inline-block;
+                font-size: x-large;
+                background: var(--color2);
+                color: var(--color3);
+                padding: 10px 10px;
+            }
+            .submenu li:last-child a{
+                border-bottom: 2px solid var(--color2);
+            }
+            .navegar ul{
+                list-style: none;
+            }
+            .menu > li{
+                position: relative;
+                display: inline-block;
+            }
+            @media (min-width: 1200px){
+                .menu > li > a{
+                    display: block;
+                    padding: 4px 10px;
+                    color: var(--color3);
+                    font-family: Arial, Helvetica, sans-serif;
+                    text-decoration: none;
+                    font-size: 16pt;
+                }
+                .submenu li a{
+                    display: block;
+                    padding: 10px 10px;
+                    color: var(--color2);
+                    font-family: Arial, Helvetica, sans-serif;
+                    text-decoration: none;
+                    font-size: 16pt;
+                }
+            }
+            @media (max-width: 1200px){
+                .menu > li > a{
+                    display: block;
+                    padding: 4px 10px;
+                    color: var(--color3);
+                    font-family: Arial, Helvetica, sans-serif;
+                    text-decoration: none;
+                    font-size: 6pt;
+                }
+                .menu > svg{
+                    height: 10px;
+                    width: 10px;
+                }
+                .submenu li a{
+                    display: block;
+                    padding: 10px 10px;
+                    color: var(--color2);
+                    font-family: Arial, Helvetica, sans-serif;
+                    text-decoration: none;
+                    font-size: 6pt;
+                }
+            }
+
+            .menu > li:hover > a{
+                color: var(--color1);
+                transition: all .8s;
+            }
+            .submenu{
+                position: absolute;
+                background: var(--color3);
+                width: 110%;
+                visibility: hidden;
+                opacity: 0;
+            }
+            .menu > li:hover .submenu{
+                visibility: visible;
+                opacity: 1;
+                transition: all .8s;
+            }
+            .submenu > li > a:hover{
+                background: var(--color1);
+                transition: all .8s;
+            }
+            .menubar{
+                position: absolute;
+            }
+            .menu li:hover g{
+                transition: .8s;
+                fill: var(--color1);
+            }
+            svg:hover g{
+                fill: var(--color1);
+                text-shadow: 1px 1px 1px var(--color2);
+            }

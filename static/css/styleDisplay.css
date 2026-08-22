@@ -1,0 +1,53 @@
+            .texto-desplegable{
+                display: block;
+                background-color: var(--color2);
+                padding: 2px 10px;
+                margin: 5px 30px;
+                margin-bottom: 0px;
+                box-shadow: 2px 2px 4px var(--color3);
+                font-family: Helvetica;
+            }
+            .texto-desplegable > font{
+                background: var(--color2);
+                display: none;
+                margin-left: 30px;
+            }
+            .texto-desplegable > font > h6{
+                color: var(--color3);
+                font-size: small;
+            }
+            .texto-desplegable h5{
+                color: var(--color3);
+                font-size: medium;
+            }
+            .texto-desplegable:hover > font{
+                display: block;
+            }
+            .texto-desplegable:hover > h5{
+                color: var(--color1);
+            }
+            .subtexto-desplegable{
+                display: block;
+                background-color: var(--color2);
+                font-family: Helvetica;
+            }
+            .subtexto-desplegable font{
+                font-size: small;
+                background: var(--color2);
+                display: none;
+                margin-left: 30px;
+            }
+            .subtexto-desplegable > font > h6{
+                color: var(--color3);
+                font-size: small;
+            }
+            .subtexto-desplegable h5{
+                color: var(--color3);
+                font-size: medium;
+            }
+            .subtexto-desplegable:hover > font{
+                display: block;
+            }
+            .subtexto-desplegable:hover > h5{
+                color: var(--color1);
+            }

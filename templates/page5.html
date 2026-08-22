@@ -1,0 +1,903 @@
+{% extends 'base/base.html' %}
+
+{% block titulo %}
+    Diario
+{% endblock %}
+
+{% block nombre %}
+    Diario
+{% endblock %}
+
+{% block contenido %}
+    <div class="whiteblock">
+        <table><tr><td>
+        <button class="calendar-button" id="cbJ"> Julio 2022 </button>
+        <button class="calendar-button" id="cbA"> Agosto 2022 </button>
+        <button class="calendar-button" id="cbS"> Septiembre 2022 </button>
+        <button class="calendar-button" id="cbO"> Octubre 2022 </button>
+        <button class="calendar-button" id="cbN"> Noviembre 2022 </button>
+        <button class="calendar-button" id="cbD"> Diciembre 2022 </button>
+        <button class="calendar-button" id="cbE"> Enero 2023 </button>
+        <button class="calendar-button" id="cbF"> Febrero 2023 </button>
+        <button class="calendar-button" id="cbM"> Marzo 2023 </button>
+        </td><td>
+        <table class="calendar-table" id="cgJ">
+            <tr>
+                <td> <font> L </font> </td>
+                <td> <font> M </font> </td>
+                <td> <font> X </font> </td>
+                <td> <font> J </font> </td>
+                <td> <font> V </font> </td>
+                <td> <font> S </font> </td>
+                <td> <font> D </font> </td>
+            </tr>
+            <tr>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font> 1 </font> </td>
+                <td> <font> 2 </font> </td>
+                <td> <font> 3 </font> </td>
+            </tr>
+            <tr>
+                <td> <font> 4 </font> </td>
+                <td> <font> 5 </font> </td>
+                <td> <font> 6 </font> </td>
+                <td> <font> 7 </font> </td>
+                <td> <font> 8 </font> </td>
+                <td>  <a href="/web/proceso#d9m7"> <font> 9 </font> </a>  </td>
+                <td> <font> 10 </font> </td>
+            </tr>
+            <tr>
+                <td> <font> 11 </font> </td>
+                <td> <font> 12 </font> </td>
+                <td> <font> 13 </font> </td>
+                <td> <font> 14 </font> </td>
+                <td> <font> 15 </font> </td>
+                <td> <font> 16 </font> </td>
+                <td> <font> 17 </font> </td>
+            </tr>
+            <tr>
+                <td> <font> 18 </font> </td>
+                <td>  <a href="/web/proceso#d19m7"> <font> 19 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d19m7"> <font> 20 </font> </a>  </td>
+                <td> <font> 21 </font> </td>
+                <td> <font> 22 </font> </td>
+                <td> <font> 23 </font> </td>
+                <td> <font> 24 </font> </td>
+            </tr>
+            <tr>
+                <td> <font> 25 </font> </td>
+                <td> <font> 26 </font> </td>
+                <td> <font> 27 </font> </td>
+                <td> <font> 28 </font> </td>
+                <td> <font> 29 </font> </td>
+                <td> <font> 30 </font> </td>
+                <td> <font> 31 </font> </td>
+            </tr>
+            <tr>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+            </tr>
+        </table>
+        <table class="calendar-table" id="cgA">
+            <tr>
+                <td> <font> L </font> </td>
+                <td> <font> M </font> </td>
+                <td> <font> X </font> </td>
+                <td> <font> J </font> </td>
+                <td> <font> V </font> </td>
+                <td> <font> S </font> </td>
+                <td> <font> D </font> </td>
+            </tr>
+            <tr>
+                <td> <font> 1 </font> </td>
+                <td> <font> 2 </font> </td>
+                <td>  <a href="/web/proceso#d3m8"> <font> 3 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d3m8"> <font> 4 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d3m8"> <font> 5 </font> </a>  </td>
+                <td> <font> 6 </font> </td>
+                <td>  <a href="/web/proceso#d7m8"> <font> 7 </font> </a>  </td>
+            </tr>
+            <tr>
+                <td>  <a href="/web/proceso#d8m8"> <font> 8 </font> </a>  </td>
+                <td> <font> 9 </font> </td>
+                <td> <font> 10 </font> </td>
+                <td> <font> 11 </font> </td>
+                <td> <font> 12 </font> </td>
+                <td> <font> 13 </font> </td>
+                <td> <font> 14 </font> </td>
+            </tr>
+            <tr>
+                <td> <font> 15 </font> </td>
+                <td>  <a href="/web/proceso#d16m8"> <font> 16 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d16m8"> <font> 17 </font> </a>  </td>
+                <td> <font> 18 </font> </td>
+                <td> <font> 19 </font> </td>
+                <td>  <a href="/web/proceso#d20m8"> <font> 20 </font> </a>  </td>
+                <td> <font> 21 </font> </td>
+            </tr>
+            <tr>
+                <td> <font> 22 </font> </td>
+                <td> <font> 23 </font> </td>
+                <td> <font> 24 </font> </td>
+                <td> <font> 25 </font> </td>
+                <td>  <a href="/web/proceso#d26m8"> <font> 26 </font> </a>  </td>
+                <td> <font> 27 </font> </td>
+                <td> <font> 28 </font> </td>
+            </tr>
+            <tr>
+                <td> <font> 29 </font> </td>
+                <td> <font> 30 </font> </td>
+                <td> <font> 31 </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+            </tr>
+            <tr>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+            </tr>
+        </table>
+        <table class="calendar-table" id="cgS">
+            <tr>
+                <td> <font> L </font> </td>
+                <td> <font> M </font> </td>
+                <td> <font> X </font> </td>
+                <td> <font> J </font> </td>
+                <td> <font> V </font> </td>
+                <td> <font> S </font> </td>
+                <td> <font> D </font> </td>
+            </tr>
+            <tr>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td>  <a href="/web/proceso#d1m9"> <font> 1 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d1m9"> <font> 2 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d1m9"> <font> 3 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d4m9"> <font> 4 </font> </a>  </td>
+            </tr>
+            <tr>
+                <td> <font> 5 </font> </td>
+                <td> <font> 6 </font> </td>
+                <td> <font> 7 </font> </td>
+                <td> <font> 8 </font> </td>
+                <td> <font> 9 </font> </td>
+                <td> <font> 10 </font> </td>
+                <td> <font> 11 </font> </td>
+            </tr>
+            <tr>
+                <td> <font> 12 </font> </td>
+                <td> <font> 13 </font> </td>
+                <td> <font> 14 </font> </td>
+                <td> <font> 15 </font> </td>
+                <td> <font> 16 </font> </td>
+                <td>  <a href="/web/proceso#d17m9"> <font> 17 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d17m9"> <font> 18 </font> </a>  </td>
+            </tr>
+            <tr>
+                <td>  <a href="/web/proceso#d19m9"> <font> 19 </font> </a>  </td>
+                <td> <font> 20 </font> </td>
+                <td> <font> 21 </font> </td>
+                <td> <font> 22 </font> </td>
+                <td> <font> 23 </font> </td>
+                <td>  <a href="/web/proceso#d24m9"> <font> 24 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d24m9"> <font> 25 </font> </a>  </td>
+            </tr>
+            <tr>
+                <td> <font> 26 </font> </td>
+                <td> <font> 27 </font> </td>
+                <td> <font> 28 </font> </td>
+                <td> <font> 29 </font> </td>
+                <td> <font> 30 </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+            </tr>
+            <tr>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+            </tr>
+        </table>
+        <table class="calendar-table" id="cgO">
+            <tr>
+                <td> <font> L </font> </td>
+                <td> <font> M </font> </td>
+                <td> <font> X </font> </td>
+                <td> <font> J </font> </td>
+                <td> <font> V </font> </td>
+                <td> <font> S </font> </td>
+                <td> <font> D </font> </td>
+            </tr>
+            <tr>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td>  <a href="/web/proceso#d24m9"> <font> 1 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d2m10"> <font> 2 </font> </a>  </td>
+            </tr>
+            <tr>
+                <td> <font> 3 </font> </td>
+                <td> <font> 4 </font> </td>
+                <td> <font> 5 </font> </td>
+                <td>  <a href="/web/proceso#d6m10"> <font> 6 </font> </a>  </td>
+                <td> <font> 7 </font> </td>
+                <td>  <a href="/web/proceso#d8m10"> <font> 8 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d8m10"> <font> 9 </font> </a>  </td>
+            </tr>
+            <tr>
+                <td>  <a href="/web/proceso#d8m10"> <font> 10 </font> </a> </td>
+                <td> <font> 11 </font> </td>
+                <td> <font> 12 </font> </td>
+                <td> <font> 13 </font> </td>
+                <td> <font> 14 </font> </td>
+                <td>  <a href="/web/proceso#d15m10"> <font> 15 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d15m10"> <font> 16 </font> </a>  </td>
+            </tr>
+            <tr>
+                <td> <font> 17 </font> </td>
+                <td> <font> 18 </font> </td>
+                <td> <font> 19 </font> </td>
+                <td>  <a href="/web/proceso#d20m10"> <font> 20 </font> </a>  </td>
+                <td> <font> 21 </font> </td>
+                <td>  <a href="/web/proceso#d22m10"> <font> 22 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d22m10"> <font> 23 </font> </a>  </td>
+            </tr>
+            <tr>
+                <td>  <a href="/web/proceso#d22m10"> <font> 24 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d22m10"> <font> 25 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d26m10"> <font> 26 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d26m10"> <font> 27 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d28m10"> <font> 28 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d28m10"> <font> 29 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d28m10"> <font> 30 </font> </a>  </td>
+            </tr>
+            <tr>
+                <td>  <a href="/web/proceso#d31m10"> <font> 31 </font> </a>  </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+            </tr>
+        </table>
+        <table class="calendar-table" id="cgN">
+            <tr>
+                <td> <font> L </font> </td>
+                <td> <font> M </font> </td>
+                <td> <font> X </font> </td>
+                <td> <font> J </font> </td>
+                <td> <font> V </font> </td>
+                <td> <font> S </font> </td>
+                <td> <font> D </font> </td>
+            </tr>
+            <tr>
+                <td> <font>   </font> </td>
+                <td>  <a href="/web/proceso#d31m10"> <font> 1 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d2m11"> <font> 2 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d2m11"> <font> 3 </font> </a>  </td>
+                <td> <font> 4 </font> </td>
+                <td> <font> 5 </font> </td>
+                <td>  <a href="/web/proceso#d6m11"> <font> 6 </font> </a>  </td>
+            </tr>
+            <tr>
+                <td>  <a href="/web/proceso#d7m11"> <font> 7 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d7m11"> <font> 8 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d7m11"> <font> 9 </font> </a>  </td>
+                <td> <font> 10 </font> </td>
+                <td> <font> 11 </font> </td>
+                <td>  <a href="/web/proceso#d12m11"> <font> 12 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d12m11"> <font> 13 </font> </a>  </td>
+            </tr>
+            <tr>
+                <td>  <a href="/web/proceso#d14m11"> <font> 14 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d14m11"> <font> 15 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d14m11"> <font> 16 </font> </a>  </td>
+                <td> <font> 17 </font> </td>
+                <td> <font> 18 </font> </td>
+                <td>  <a href="/web/proceso#d19m11"> <font> 19 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d19m11"> <font> 20 </font> </a>  </td>
+            </tr>
+            <tr>
+                <td>  <a href="/web/proceso#d21m11"> <font> 21 </font> </a>  </td>
+                <td> <font> 22 </font> </td>
+                <td> <font> 23 </font> </td>
+                <td> <font> 24 </font> </td>
+                <td> <font> 25 </font> </td>
+                <td> <font> 26 </font> </td>
+                <td> <font> 27 </font> </td>
+            </tr>
+            <tr>
+                <td> <font> 28 </font> </td>
+                <td> <font> 29 </font> </td>
+                <td> <font> 30 </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+            </tr>
+            <tr>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+            </tr>
+        </table>
+        <table class="calendar-table" id="cgD">
+            <tr>
+                <td> <font> L </font> </td>
+                <td> <font> M </font> </td>
+                <td> <font> X </font> </td>
+                <td> <font> J </font> </td>
+                <td> <font> V </font> </td>
+                <td> <font> S </font> </td>
+                <td> <font> D </font> </td>
+            </tr>
+            <tr>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font> 1 </font> </td>
+                <td> <font> 2 </font> </td>
+                <td> <font> 3 </font> </td>
+                <td> <font> 4 </font> </td>
+            </tr>
+            <tr>
+                <td> <font> 5 </font> </td>
+                <td> <font> 6 </font> </td>
+                <td> <font> 7 </font> </td>
+                <td> <font> 8 </font> </td>
+                <td> <font> 9 </font> </td>
+                <td> <font> 10 </font> </td>
+                <td> <font> 11 </font> </td>
+            </tr>
+            <tr>
+                <td> <font> 12 </font> </td>
+                <td> <font> 13 </font> </td>
+                <td> <font> 14 </font> </td>
+                <td> <font> 15 </font> </td>
+                <td> <font> 16 </font> </td>
+                <td> <font> 17 </font> </td>
+                <td> <font> 18 </font> </td>
+            </tr>
+            <tr>
+                <td> <font> 19 </font> </td>
+                <td>  <a href="/web/proceso#d20m12"> <font> 20 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d20m12"> <font> 21 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d20m12"> <font> 22 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d20m12"> <font> 23 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d20m12"> <font> 24 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d20m12"> <font> 25 </font> </a>  </td>
+            </tr>
+            <tr>
+                <td>  <a href="/web/proceso#d20m12"> <font> 26 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d20m12"> <font> 27 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d28m12"> <font> 28 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d29m12"> <font> 29 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d30m12"> <font> 31 </font> </a>  </td>
+                <td> <font> 31 </font> </td>
+                <td> <font>   </font> </td>
+            </tr>
+            <tr>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+            </tr>
+        </table>
+        <table class="calendar-table" id="cgE">
+            <tr>
+                <td> <font> L </font> </td>
+                <td> <font> M </font> </td>
+                <td> <font> X </font> </td>
+                <td> <font> J </font> </td>
+                <td> <font> V </font> </td>
+                <td> <font> S </font> </td>
+                <td> <font> D </font> </td>
+            </tr>
+            <tr>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td>  <a href="/web/proceso#d30m12"> <font> 1 </font> </a>  </td>
+            </tr>
+            <tr>
+                <td>  <a href="/web/proceso#d2m1"> <font> 2 </font> </a>  </td>
+                <td> <font> 3 </font> </td>
+                <td>  <a href="/web/proceso#d4m1"> <font> 3 </font> </a>  </td>
+                <td> <font> 5 </font> </td>
+                <td>  <a href="/web/proceso#d6m1"> <font> 6 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d7m1"> <font> 7 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d7m1"> <font> 8 </font> </a>  </td>
+            </tr>
+            <tr>
+                <td>  <a href="/web/proceso#d7m1"> <font> 9 </font> </a>  </td>
+                <td> <font> 10 </font> </td>
+                <td> <font> 11 </font> </td>
+                <td>  <a href="/web/proceso#d7m1"> <font> 12 </font> </a>  </td>
+                <td> <font> 13 </font> </td>
+                <td>  <a href="/web/proceso#d6m1"> <font> 14 </font> </a>  </td>
+                <td> <font> 15 </font> </td>
+            </tr>
+            <tr>
+                <td>  <a href="/web/proceso#d16m1"> <font> 16 </font> </a>  </td>
+                <td> <font> 17 </font> </td>
+                <td>  <a href="/web/proceso#d16m1"> <font> 18 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d16m1"> <font> 19 </font> </a>  </td>
+                <td> <font> 20 </font> </td>
+                <td>  <a href="/web/proceso#d16m1"> <font> 21 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d16m1"> <font> 22 </font> </a>  </td>
+            </tr>
+            <tr>
+                <td>  <a href="/web/proceso#d16m1"> <font> 23 </font> </a>  </td>
+                <td> <font> 24 </font> </td>
+                <td> <font> 25 </font> </td>
+                <td>  <a href="/web/proceso#d26m1"> <font> 26 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d26m1"> <font> 27 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d26m1"> <font> 28 </font> </a>  </td>
+                <td> <font> 29 </font> </td>
+            </tr>
+            <tr>
+                <td> <font> 30 </font> </td>
+                <td> <font> 31 </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+            </tr>
+        </table>
+
+        <table class="calendar-table" id="cgF">
+            <tr>
+                <td> <font> L </font> </td>
+                <td> <font> M </font> </td>
+                <td> <font> X </font> </td>
+                <td> <font> J </font> </td>
+                <td> <font> V </font> </td>
+                <td> <font> S </font> </td>
+                <td> <font> D </font> </td>
+            </tr>
+            <tr>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td>  <a href="/web/proceso#d1m2"> <font> 1 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d1m2"> <font> 2 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d1m2"> <font> 3 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d1m2"> <font> 4 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d1m2"> <font> 5 </font> </a>  </td>
+            </tr>
+            <tr>
+                <td> <font> 6 </font> </td>
+                <td> <font> 7 </font> </td>
+                <td> <font> 8 </font> </td>
+                <td> <font> 9 </font> </td>
+                <td> <font> 10 </font> </td>
+                <td> <font> 11 </font> </td>
+                <td> <font> 12 </font> </td>
+            </tr>
+            <tr>
+                <td> <font> 13 </font> </td>
+                <td> <font> 14 </font> </td>
+                <td> <font> 15 </font> </td>
+                <td> <font> 16 </font> </td>
+                <td> <font> 17 </font> </td>
+                <td> <font> 18 </font> </td>
+                <td> <font> 19 </font> </td>
+            </tr>
+            <tr>
+                <td>  <a href="/web/proceso#d20m2"> <font> 20 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d20m2"> <font> 21 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d20m2"> <font> 22 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d20m2"> <font> 23 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d20m2"> <font> 24 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d20m2"> <font> 25 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d20m2"> <font> 26 </font> </a>  </td>
+            </tr>
+            <tr>
+                <td> <font> 27 </font> </td>
+                <td> <font> 28 </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+            </tr>
+            <tr>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+            </tr>
+        </table>
+        <table class="calendar-table" id="cgM">
+            <tr>
+                <td> <font> L </font> </td>
+                <td> <font> M </font> </td>
+                <td> <font> X </font> </td>
+                <td> <font> J </font> </td>
+                <td> <font> V </font> </td>
+                <td> <font> S </font> </td>
+                <td> <font> D </font> </td>
+            </tr>
+            <tr>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font> 1 </font> </td>
+                <td> <font> 2 </font> </td>
+                <td> <font> 3 </font> </td>
+                <td> <font> 4 </font> </td>
+                <td> <font> 5 </font> </td>
+            </tr>
+            <tr>
+                <td> <font> 6 </font> </td>
+                <td> <font> 7 </font> </td>
+                <td> <font> 8 </font> </td>
+                <td> <font> 9 </font> </td>
+                <td> <font> 10 </font> </td>
+                <td> <font> 11 </font> </td>
+                <td> <font> 12 </font> </td>
+            </tr>
+            <tr>
+                <td> <font> 13 </font> </td>
+                <td> <font> 14 </font> </td>
+                <td> <font> 15 </font> </td>
+                <td> <font> 16 </font> </td>
+                <td> <font> 17 </font> </td>
+                <td> <font> 18 </font> </td>
+                <td> <font> 19 </font> </td>
+            </tr>
+            <tr>
+                <td> <font> 20 </font> </td>
+                <td> <font> 21 </font> </td>
+                <td> <font> 22 </font> </td>
+                <td> <font> 23 </font> </td>
+                <td> <font> 24 </font> </td>
+                <td> <font> 25 </font> </td>
+                <td> <font> 26 </font> </td>
+            </tr>
+            <tr>
+                <td>  <a href="/web/proceso#d27m3"> <font> 27 </font> </a>  </td>
+                <td> <font> 28 </font> </td>
+                <td> <font> 29 </font> </td>
+                <td> <font> 30 </font> </td>
+                <td> <font> 31 </font> </td>
+                <td> <font>   </font> </td>
+                <td> <font>   </font> </td>
+            </tr>
+            <tr>
+                <td>  <a href="/web/proceso#d6m4"> <font> 6 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d11m4"> <font> 11 </font> </a>  </td>
+                <td>  <a href="/web/proceso#d11m5"> <font> 11 </font> </a>  </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+                <td> <font>  . </font> </td>
+            </tr></td></tr>
+        </table>
+        </tr></table>
+    </div>
+    <div class="whiteblock">
+        <h5 id="d9m7">9 de Julio de 2022</h5>
+        <br/>
+        <h6>Relleno un formulario para informar a mi colegio del proyecto que quiero hacer.</h6>
+        <br/>
+        <a href="/web/static/img/diario/Formulario.PNG"><img class="image-small" src="{{ url_for('personal.static',filename='img/diario/Formulario.PNG') }}"></a>
+        <br/ id="d19m7">
+        <h5> 19-20 de Julio de 2022 </h5>
+        <br/>
+        <h6> Creo un programa hecho para resolver problemas de trigonometría, este es capaz de calcular los ángulos o lados que faltan en un triángulo cualquiera. Este serviría para muchos cálculos del robot en un futuro. </h6>
+        <br/ id="d3m8">
+        <h5> 3-5 de Agosto de 2022 </h5>
+        <br/>
+        <h6> Aprendo a programar ventanas en python (como si fueran aplicaciones). También a crear un servidor web entre dos dispositivos. </h6>
+        <br/ id="d7m8">
+        <h5> 7 de Agosto de 2022 </h5>
+        <br/>
+        <h6> Compro los componentes que tendrá el robot por Aliexpress. </h6>
+        <br/>
+        <a href="/web/static/img/diario/Aliexpress1.PNG"><img class="image-small2" src="{{ url_for('personal.static',filename='img/diario/Aliexpress1.PNG') }}"></a>
+        <a href="/web/static/img/diario/Aliexpress2.PNG"><img class="image-small2" src="{{ url_for('personal.static',filename='img/diario/Aliexpress2.PNG') }}"></a>
+        <a href="/web/static/img/diario/Aliexpress3.PNG"><img class="image-small2" src="{{ url_for('personal.static',filename='img/diario/Aliexpress3.PNG') }}"></a>
+        <br/ id="d8m8">
+        <h5> 8 de Agosto de 2022 </h5>
+        <br/>
+        <h6> Comienzo a redactar el criterio A. </h6>
+        <br/ id="d16m8">
+        <h5> 16-17 de Agosto de 2022 </h5>
+        <br/>
+        <h6> Programo los motores de las ruedas. El código tiene 5 funciones para la clase ruedas: avanzar, retroceder, izquierda, derecha y parar, con el parámetro de la duración. </h6>
+        <br/>
+        <a href="/web/static/img/diario/Ruedas.PNG"><img class="image-small" src="{{ url_for('personal.static',filename='img/diario/Ruedas.PNG') }}"></a>
+        <br/ id="d20m8">
+        <h5> 20 de Agosto de 2022 </h5>
+        <br/>
+        <h6> Programo el sensor de ultrasonido utilizando un modelo de la cara hecho con la impresora 3D. El código me permite leer los datos del sensor con una función. </h6>
+        <br/>
+        <a href="/web/static/img/diario/Cabeza.PNG"><img class="image-small" src="{{ url_for('personal.static',filename='img/diario/Cabeza.PNG') }}"></a>
+        <br/ id="d26m8">
+        <h5> 26 de Agosto de 2022 </h5>
+        <br/>
+        <h6> Programo un código para girar servomotores. </h6>
+        <br/ id="d1m9">
+        <h5> 1-3 de Septiembre de 2022 </h5>
+        <br/>
+        <h6> Utilizo una aplicación llamada EasyEDA para diseñar un circuito impreso en el que realizaría las conexiones. </h6>
+        <br/ id="d4m9">
+        <h5> 4 de Septiembre de 2022 </h5>
+        <br/>
+        <h6> Envío el diseño de la PCB (circuito impreso) a la empresa JLCPCB para que me lo enviaran hecho. </h6>
+        <br/>
+        <a href="/web/static/img/diario/JLCPCB.PNG"><img class="image-small2" src="{{ url_for('personal.static',filename='img/diario/JLCPCB.PNG') }}"></a>
+        <br/ id="d17m9">
+        <h5> 17-18 de Septiembre de 2022 </h5>
+        <br/>
+        <h6> Programo un código por el que la placa puede convertir voz a texto y viceversa. Así puede dialogar con el usuario y escuchar comandos de voz. </h6>
+        <br/ id="d19m9">
+        <h5> 19 de Septiembre de 2022 </h5>
+        <br/>
+        <h6> Recibo la PCB diseñada el día 4. Sueldo los componentes y pines para las conexiones. </h6>
+        <br/>
+        <a href="/web/static/img/diario/PCB.PNG"><img class="image-small" src="{{ url_for('personal.static',filename='img/diario/PCB.PNG') }}"></a>
+        <br/ id="d24m9">
+        <h5> 24-25 de Septiembre y 1 de Octubre de 2022 </h5>
+        <br/>
+        <h6> Programo la matriz de LEDs de colores 8x8. </h6>
+        <br/>
+        <iframe src="https://drive.google.com/file/d/1dLds-I9uzHEnpbSHvMQYIxWwQoWyG1q5/preview" width="640" height="480" allow="autoplay"></iframe>
+        <br/ id="d1m10">
+        <h5> 1 de Octubre de 2022 </h5>
+        <br/>
+        <h6> He creado un boceto para el robot. </h6>
+        <br/>
+        <a href="/web/static/img/diario/Boceto.PNG"><img class="image-small" src="{{ url_for('personal.static',filename='img/diario/Boceto.PNG') }}"></a>
+        <br/ id="d2m10">
+        <h5> 2 de Octubre de 2022 </h5>
+        <br/>
+        <h6> Primera reunión online con mi supervisora. Le he explicado mi proyecto y enseñado mi criterio A. Me resuelve mis dudas y me comparte documentos que me son de ayuda. </h6>
+        <br/ id="d6m10">
+        <h5> 6 de Octubre de 2022 </h5>
+        <br/>
+        <h6> He creado un diseño 3D para la segunda y tercera planta del robot. </h6>
+        <iframe width="725" height="453" src="https://www.tinkercad.com/embed/jLb0F9tiE4z?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+        <iframe width="725" height="453" src="https://www.tinkercad.com/embed/bzf19kPwikt?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+        <br/ id="d8m10">
+        <h5> 8-10 de Octubre de 2022 </h5>
+        <br/>
+        <h6> Continuo con el diseño 3D. </h6>
+        <iframe width="725" height="453" src="https://www.tinkercad.com/embed/jIcSzqzIZlS?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+        <iframe width="725" height="453" src="https://www.tinkercad.com/embed/cnpg70R6HAM?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+        <br/ id="d15m10">
+        <h5> 15-16 de Octubre de 2022 </h5>
+        <br/>
+        <h6> Imprimo el diseño 3D con mi impresora. </h6>
+        <br/>
+        <div id="images1" class="images">
+            <button class="lr-button" id="leftbutton1"> &lt </button>
+            <a class="a" href="/web/static/img/diario/Capa3a/RobotPlanta3b9.jpg"><div class="image-container" id="image1a"><img class="image-medium" src="{{ url_for('personal.static',filename='img/diario/Capa3a/RobotPlanta3b9.jpg') }}"><h6>1. Comienza la impresión, creando las primeras paredes y capa.</h6></div></a>
+            <a class="a" href="/web/static/img/diario/Capa3a/RobotPlanta3b8.jpg"><div class="image-container" id="image1b"><img class="image-medium" src="{{ url_for('personal.static',filename='img/diario/Capa3a/RobotPlanta3b8.jpg') }}"><h6>2. Ya está creada la base y se diferencian las paredes.</h6></div></a>
+            <a class="a" href="/web/static/img/diario/Capa3a/RobotPlanta3b7.jpg"><div class="image-container" id="image1c"><img class="image-medium" src="{{ url_for('personal.static',filename='img/diario/Capa3a/RobotPlanta3b7.jpg') }}"><h6>3. La base está acabada, comienzan a aparecer los detalles y paredes verticales.</h6></div></a>
+            <a class="a" href="/web/static/img/diario/Capa3a/RobotPlanta3b6.jpg"><div class="image-container" id="image1d"><img class="image-medium" src="{{ url_for('personal.static',filename='img/diario/Capa3a/RobotPlanta3b6.jpg') }}"><h6>4. Se aprecian los detalles y aparecen los primeros soportes.</h6></div></a>
+            <a class="a" href="/web/static/img/diario/Capa3a/RobotPlanta3b5.jpg"><div class="image-container" id="image1e"><img class="image-medium" src="{{ url_for('personal.static',filename='img/diario/Capa3a/RobotPlanta3b5.jpg') }}"><h6>5. Aumenta la altura.</h6></div></a>
+            <a class="a" href="/web/static/img/diario/Capa3a/RobotPlanta3b4.jpg"><div class="image-container" id="image1f"><img class="image-medium" src="{{ url_for('personal.static',filename='img/diario/Capa3a/RobotPlanta3b4.jpg') }}"><h6>6. Varios detalles ya están acabados, aparecen los soportes.</h6></div></a>
+            <a class="a" href="/web/static/img/diario/Capa3a/RobotPlanta3b3.jpg"><div class="image-container" id="image1g"><img class="image-medium" src="{{ url_for('personal.static',filename='img/diario/Capa3a/RobotPlanta3b3.jpg') }}"><h6>7. Acaban soportes y aparecen nuevos.</h6></div></a>
+            <a class="a" href="/web/static/img/diario/Capa3a/RobotPlanta3b2.jpg"><div class="image-container" id="image1h"><img class="image-medium" src="{{ url_for('personal.static',filename='img/diario/Capa3a/RobotPlanta3b2.jpg') }}"><h6>8. Acaban todos los detalles.</h6></div></a>
+            <a class="a" href="/web/static/img/diario/Capa3a/RobotPlanta3b1.jpg"><div class="image-container" id="image1i"><img class="image-medium" src="{{ url_for('personal.static',filename='img/diario/Capa3a/RobotPlanta3b1.jpg') }}"><h6>9. Resultado.</h6></div></a>
+            <button class="lr-button" id="rightbutton1"> &gt </button>
+        </div>
+        <br/>
+        <div id="images2" class="images">
+            <button class="lr-button" id="leftbutton2"> &lt </button>
+            <a class="a" href="/web/static/img/diario/Capa3a/RobotPlanta3a1.jpg"><div class="image-container" id="image2a"><img class="image-medium" src="{{ url_for('personal.static',filename='img/diario/Capa3a/RobotPlanta3a1.jpg') }}"><h6>1. Comienza la impresión, creando las primeras paredes y capa.</h6></div></a>
+            <a class="a" href="/web/static/img/diario/Capa3a/RobotPlanta3a2.jpg"><div class="image-container" id="image2b"><img class="image-medium" src="{{ url_for('personal.static',filename='img/diario/Capa3a/RobotPlanta3a2.jpg') }}"><h6>2. Ya está creada la base y se notan las ranuras.</h6></div></a>
+            <a class="a" href="/web/static/img/diario/Capa3a/RobotPlanta3a3.jpg"><div class="image-container" id="image2c"><img class="image-medium" src="{{ url_for('personal.static',filename='img/diario/Capa3a/RobotPlanta3a3.jpg') }}"><h6>3. La base está acabada, comienzan a aparecer las paredes verticales.</h6></div></a>
+            <a class="a" href="/web/static/img/diario/Capa3a/RobotPlanta3a4.jpg"><div class="image-container" id="image2d"><img class="image-medium" src="{{ url_for('personal.static',filename='img/diario/Capa3a/RobotPlanta3a4.jpg') }}"><h6>4. Se aprecian los detalles.</h6></div></a>
+            <a class="a" href="/web/static/img/diario/Capa3a/RobotPlanta3a5.jpg"><div class="image-container" id="image2e"><img class="image-medium" src="{{ url_for('personal.static',filename='img/diario/Capa3a/RobotPlanta3a5.jpg') }}"><h6>5. Aumenta la altura.</h6></div></a>
+            <a class="a" href="/web/static/img/diario/Capa3a/RobotPlanta3a6.jpg"><div class="image-container" id="image2f"><img class="image-medium" src="{{ url_for('personal.static',filename='img/diario/Capa3a/RobotPlanta3a6.jpg') }}"><h6>6. Ya está acabado, así se vería al colocarse sobre la base anterior.</h6></div></a>
+            <a class="a" href="/web/static/img/diario/Capa3a/RobotPlanta3a7.jpg"><div class="image-container" id="image2g"><img class="image-medium" src="{{ url_for('personal.static',filename='img/diario/Capa3a/RobotPlanta3a7.jpg') }}"><h6>7. Creo una pieza negra para decorar el robot.</h6></div></a>
+            <button class="lr-button" id="rightbutton2"> &gt </button>
+        </div>
+        <br/>
+        <h6> Tras varios fallos al tratar de imprimir la segunda planta, la pospongo. </h6>
+        <br/ id="d20m10">
+        <h5> 20 de Octubre de 2022 </h5>
+        <br/>
+        <h6> Diseño la cabeza y brazos. </h6>
+        <iframe width="725" height="453" src="https://www.tinkercad.com/embed/bG8LIRs1wws?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+        <br/ id="d22m10">
+        <h5> 22-25 de Octubre de 2022 </h5>
+        <br/>
+        <h6> Diseño los brazos. </h6>
+        <br/>
+        <iframe width="725" height="453" src="https://www.tinkercad.com/embed/axmkRgC5Kcm?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+        <br/>
+        <h6> Imprimo el cuerpo, la cabeza y los brazos. </h6>
+        <br/>
+        <div id="images3" class="images">
+            <button class="lr-button" id="leftbutton3"> &lt </button>
+            <a class="a" href="/web/static/img/diario/Parte2/RobotParte2a.jpg"><div class="image-container" id="image3a"><img class="image-medium" src="{{ url_for('personal.static',filename='img/diario/Parte2/RobotParte2a.jpg') }}"><h6>1. Impresión del cuerpo.</h6></div></a>
+            <a class="a" href="/web/static/img/diario/Parte2/RobotParte2b.jpg"><div class="image-container" id="image3b"><img class="image-medium" src="{{ url_for('personal.static',filename='img/diario/Parte2/RobotParte2b.jpg') }}"><h6>2. Añado la cabeza.</h6></div></a>
+            <a class="a" href="/web/static/img/diario/Parte2/RobotParte2c.jpg"><div class="image-container" id="image3c"><img class="image-medium" src="{{ url_for('personal.static',filename='img/diario/Parte2/RobotParte2c.jpg') }}"><h6>3. Cabeza vista desde atrás.</h6></div></a>
+            <a class="a" href="/web/static/img/diario/Parte2/RobotParte2d.jpg"><div class="image-container" id="image3d"><img class="image-medium" src="{{ url_for('personal.static',filename='img/diario/Parte2/RobotParte2d.jpg') }}"><h6>4. Brazos robóticos.</h6></div></a>
+            <button class="lr-button" id="rightbutton3"> &gt </button>
+        </div>
+        <br/ id="d26m10">
+        <h5> 26-27 de Octubre de 2022 </h5>
+        <br/>
+        <h6> Monto la cabeza y los brazos. </h6>
+        <br/>
+        <div id="images4" class="images">
+            <button class="lr-button" id="leftbutton4"> &lt </button>
+            <a class="a" href="/web/static/img/diario/Resultado/RobotResultado1a.jpg"><div class="image-container" id="image4a"><img class="image-medium" src="{{ url_for('personal.static',filename='img/diario/Resultado/RobotResultado1a.jpg') }}"></div></a>
+            <a class="a" href="/web/static/img/diario/Resultado/RobotResultado1b.jpg"><div class="image-container" id="image4b"><img class="image-medium" src="{{ url_for('personal.static',filename='img/diario/Resultado/RobotResultado1b.jpg') }}"></div></a>
+            <a class="a" href="/web/static/img/diario/Resultado/RobotResultado1c.jpg"><div class="image-container" id="image4c"><img class="image-medium" src="{{ url_for('personal.static',filename='img/diario/Resultado/RobotResultado1c.jpg') }}"></div></a>
+            <a class="a" href="/web/static/img/diario/Resultado/RobotResultado1d.jpg"><div class="image-container" id="image4d"><img class="image-medium" src="{{ url_for('personal.static',filename='img/diario/Resultado/RobotResultado1d.jpg') }}"></div></a>
+            <button class="lr-button" id="rightbutton4"> &gt </button>
+        </div>
+        <br/>
+        <h5> 27 de Octubre de 2022 </h5>
+        <br/>
+        <h6> Diseño la planta 1 y reúno todos los diseños en un diseño final. </h6>
+        <br/>
+        <iframe width="725" height="453" src="https://www.tinkercad.com/embed/056EImHS9a2?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+        <iframe width="725" height="453" src="https://www.tinkercad.com/embed/4sXnqwVc833?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+        <br/ id="d28m10">
+        <h5> 28 de Octubre de 2022 </h5>
+        <br/>
+        <h6> Llevo a cabo la investigación. </h6>
+        <br/>
+        <div class="download">
+            <a href="/web/enm"> Investigación </a>
+        </div>
+        <br/ id="d31m10">
+        <h5> 31 de Octubre y 1 de Noviembre de 2022 </h5>
+        <br/>
+        <h6> Imprimo la planta 1 y continuo montando los componentes. </h6>
+        <br/>
+        <div id="images5" class="images">
+            <button class="lr-button" id="leftbutton5"> &lt </button>
+            <a class="a" href="/web/static/img/diario/Resultado/RobotResultado2a.jpg"><div class="image-container" id="image5a"><img class="image-medium" src="{{ url_for('personal.static',filename='img/diario/Resultado/RobotResultado2a.jpg') }}"><h6>1. Planta 1 impresa.</h6></div></a>
+            <a class="a" href="/web/static/img/diario/Resultado/RobotResultado2b.jpg"><div class="image-container" id="image5b"><img class="image-medium" src="{{ url_for('personal.static',filename='img/diario/Resultado/RobotResultado2b.jpg') }}"><h6>2. Planta 1 con sus componentes.</h6></div></a>
+            <a class="a" href="/web/static/img/diario/Resultado/RobotResultado2c.jpg"><div class="image-container" id="image5c"><img class="image-medium" src="{{ url_for('personal.static',filename='img/diario/Resultado/RobotResultado2c.jpg') }}"><h6>3. Robot y sus componentes.</h6></div></a>
+            <button class="lr-button" id="rightbutton5"> &gt </button>
+        </div>
+        <br/ id="d1m11">
+        <h5> 2-3 de Noviembre de 2022 </h5>
+        <br/>
+        <h6> Consulto a un profesor de matemáticas de la universidad de valencia. Le pregunto cómo realizar giros en un plano 3D. Creo un programa que trabaja con coordenadas tridimensionales. </h6>
+        <br/ id="d6m11">
+        <h5> 6 de Noviembre de 2022 </h5>
+        <br/>
+        <h6> Segunda reunión online con mi supervisora. </h6>
+        <br/ id="d7m11">
+        <h5> 7-9 de Noviembre de 2022 </h5>
+        <br/>
+        <h6> Programo un código para realizar cálculos sobre un plano de coordenadas tridimensional.
+        Creo 4 clases: Punto, con coordenadas x y z; Vector, hecho de dos puntos A B; Figura, hecha de varios puntos y Plano, basado en un vector.
+        Las primeras 3 clases, pueden realizar traslaciones geométricas, pueden mostrarse en el plano y pueden ser copiados.
+        El vector tiene la posibilidad de girar un punto, figura o vector entorno a él.
+        El plano viene a ser un segundo plano de coordenadas dentro del principal, donde su eje z corresponde a su vector.
+        Además, los puntos pueden tener figuras "enlazadas" a ellos, que experimentan las mismas transformaciones.
+        A continuación se muestra el giro de un cubo (4 cuadrados) entorno a un vector inclinado respecto al plano. </h6>
+        <iframe src="https://drive.google.com/file/d/1ZG1zjyoWNXjM3O6sDhWowJ2nCh85ctpC/preview" width="640" height="480" allow="autoplay"></iframe>
+        <br/ id="d12m11">
+        <h5> 12-13 de Noviembre de 2022 </h5>
+        <br/>
+        <h6> Coloco la placa (Raspberry Pi) en el robot y hago las primeras conexiones. </h6>
+        <br/ id="d14m11">
+        <h5> 14-16 de Noviembre de 2022 </h5>
+        <br/>
+        <h6> Realizo las conexiones del robot. </h6>
+        <br/ id="d19m11">
+        <h5> 19-20 de Noviembre de 2022 </h5>
+        <br/>
+        <h6> Creo un código para analizar las imagenes de la cámara (visi∫ón artificial). </h6>
+        <br/ id="d21m11">
+        <h5> 21 de Noviembre - 15 de Diciembre de 2022 </h5>
+        <br/>
+        <h6> Realizo un cambio en la planificación y continuo el proyecto el 16 de Diciembre. </h6>
+        <br/ id="d20m12">
+        <h5> 20-27 de Diciembre de 2022 </h5>
+        <br/>
+        <h6> El día 20 ocurre un inconveniente: por un error en el diseño de la carcasa, la tarjeta SD se ha sometido a presión y ha perdido la mayoría de los archivos.
+        Los próximos días me he dedicado a volver a escribir todos los programas ya mencionados. Todavía no he escrito el código para el audio. </h6>
+        <br/ id="d28m12">
+        <h5> 28 de Diciembre de 2022 </h5>
+        <br/>
+        <h6> Logro que funcione el código para los servomotores, esto permite el movimiento de la cabeza y brazos.
+        Comienzo un código al que llamo "robot" y se encarga de gestionar el funcionamiento de todos los componentes, así como la memoria de la posición y métodos para coordinar todo el movimiento.</h6>
+        <br/ id="d29m12">
+        <h5> 29 de Diciembre de 2022 </h5>
+        <br/>
+        <h6> Termino la aplicación para controlar el robot remótamente.</h6>
+        <br/ id="d30m12">
+        <h5> 30 de Diciembre de 2022 - 1 de Enero de 2023 </h5>
+        <br/>
+        <h6> Creo un programa para que el robot siga objetos y personas con la mirada. Después utiliza la trigonometría para situar el objeto localizado en un plano de coordenadas. A partir de la distancia medida por el sensor de ultrasonidos y los ángulos que tienen los motores (2), obtengo unas coordenadas x,y,z para el objeto. </h6>
+        <br/ id="d2m12">
+        <h5> 2 de Enero de 2023 </h5>
+        <br/>
+        <h6> Creo un fichero nuevo llamado "control", en este gestiono las funciones más avanzadas, como el nuevo modo para evitar obstáculos. Hago que sus funciones sean controlables desde la app con  el menú de "modos". Además programo un método que se encarga de iniciar un hilo paralelo al código del servidor que ejecuta los modos en bucle. </h6>
+        <br/ id="d4m1">
+        <h5> 4 de Enero de 2023 </h5>
+        <br/>
+        <h6> Al romperse la tajeta el 20/12, reinstalé un sistema operativo que no me permitía programar el asistente de voz. Para solucionarlo, pido ayuda a mi padrastro, quien es informático. Su solución funcionó: volver a instalar el sistema operativo que tenía antes. </h6>
+        <br/ id="d6m1">
+        <h5> 6 y 14 de Enero de 2023 </h5>
+        <br/>
+        <h6> Programo el asistente de voz. Este mantiene una conversación; se encarga de hacer "anuncios", un método por el que la voz y la pantalla muestran un mensaje y recibe los comandos de voz. Su programa se ejecuta de manera paralela al programa del servidor y comparte el mismo objetivo que este, controlar todos los programas. Esto funciona gracias a los hilos. También le añado los comandos de voz. Para cualquier orden, debo decir "robot" y la orden. </h6>
+        <br/ id="d7m1">
+        <h5> 7-9 y 12 de Enero de 2023 </h5>
+        <br/>
+        <h6> Creo una función para que el robot mueva el brazo a una coordenada. Esto es lo que más me ha costado pues, en lo teórico se deben utilizar matrices de rotación inversas, lo que es muy complicado. Por ello, he diseñado un método más simple que explico posteriormente. Esto no sería posible si no hubiera recibido ayuda para ajustar el código para la rotación: <a href="proceso#d2m11">Programación de coordenadas</a>. </h6>
+        <br/ id="d16m1">
+        <h5> 16-23 de Enero de 2023 </h5>
+        <br/>
+        <h6> Avanzo en el código para controlar la inteligencia del robot (coger objetos, ir al principio y evitar obstáculos) </h6>
+        <br/ id="d26m1">
+        <h5> 26-28 de Enero de 2023 </h5>
+        <br/>
+        <h6> Redacto el criterio Bi </h6>
+        <br/ id="d1m2">
+        <h5> 1-5 de Febrero de 2023 </h5>
+        <br/>
+        <h6> Entrego las evidencias del robot en una carpeta de drive. </h6>
+        <div class="download">
+            <a href="https://drive.google.com/drive/folders/1mwiaIEsA3OWf_BARy1Qc_m-3qY4mxdln?usp=sharing"> Evidencias </a>
+        </div>
+        <br/ id="d20m2">
+        <h5> 20-26 de Febrero de 2023 </h5>
+        <br/>
+        <h6> Redacto el criterio Bii </h6>
+        <br/ id="d27m3">
+        <h5> 27 de Marzo de 2023 </h5>
+        <br/>
+        <h6> Creo un vídeo mostrando el robot. A partir de ahora, las mejoras del robot serán extras a parte de la entrega del producto.</h6>
+        <iframe width="100%" height="700" src="https://www.youtube.com/embed/Xm8RxdK2CSM" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <br/ id="d6m4">
+        <h5> 6 de Abril de 2023 </h5>
+        <br/>
+        <h6> Programo unos minijuegos que se pueden jugar desde la pantalla del robot. Estos incluyen una sepiente que recoge objetos para ir creciendo, un 3 en raya en el que se puede jugar contra una inteligencia artificial que he programado y un minijuego de un personaje que salta objetos. </h6>
+        <br/ id="d11m4">
+        <h5> 11 de Abril de 2023 </h5>
+        <br/>
+        <h6> Como ya había indicado, quería que el robot contara con un programa de inteligencia artificial. Con la aparición de chatGPT 4, consideré que implementárselo al robot para que pudiera mantener conversaciones sería una buena idea. Con una librería de python hice esto posible y se lo conecté al programa para hablar y escuchar. </h6>
+        <br/ id="d11m5">
+        <h5> 11 de Mayo de 2023 </h5>
+        <br/>
+        <h6> Para tener éxito en la misión de ayudar a los pacientes de enfermedades neuromusculares, consideré que dotar al robot de la capacidad para encender y apagar enchufes sería perfecto. Aunque lo haya hecho con un solo enchufe, en el caso de tener más, se podría domotizar totalmente una habitación adaptada a las necesidades de los pacientes. </h6>
+    </div>
+        <script type="text/javascript" src="{{ url_for('personal.static',filename='js/images.js') }}"></script>
+{% endblock %}
